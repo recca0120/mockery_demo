@@ -14,7 +14,9 @@ class ParserTest extends PHPUnit_Framework_TestCase
     {
         $gold = m::mock('Recca0120\TaiwanBank\Gold');
 
+        $gold->shouldReceive('getHtml')->andReturn('foo');
+
         $parser = new Parser($gold);
-        $parser->toArray();
+        $this->assertSame('foo', $parser->toArray());
     }
 }
