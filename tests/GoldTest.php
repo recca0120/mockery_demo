@@ -14,6 +14,7 @@ class GoldTest extends PHPUnit_Framework_TestCase
         $httpClient = m::mock('Http\Client\HttpClient');
         $messageFactory = m::mock('Http\Message\MessageFactory');
         $request = m::mock('Psr\Http\Message\RequestInterface');
+        $response = m::mock('Psr\Http\Message\ResponseInterface');
 
         $messageFactory
             ->shouldReceive('createRequest')
@@ -21,7 +22,8 @@ class GoldTest extends PHPUnit_Framework_TestCase
             ->andReturn($request);
 
         $httpClient
-            ->shouldReceive('sendRequest')->with($request);
+            ->shouldReceive('sendRequest')->with($request)
+            ->andReturn($response);
 
         $gold = new Gold($httpClient, $messageFactory);
         $html = $gold->getHtml();
