@@ -4,11 +4,16 @@ namespace Recca0120\TaiwanBank;
 
 use Http\Client\HttpClient;
 use Http\Message\MessageFactory;
+use Http\Client\Common\PluginClient;
+use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 
 class Gold {
     public function __construct(HttpClient $httpClient, MessageFactory $messageFactory) {
-        $this->httpClient = $httpClient;
+        $this->httpClient = new PluginClient($httpClient, [new HeaderDefaultsPlugin([
+            'Accept-Language' => 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+        ])]);
         $this->messageFactory = $messageFactory;
+
     }
 
     public function getHtml() {

@@ -21,6 +21,15 @@ class GoldTest extends PHPUnit_Framework_TestCase
             ->with('GET', 'http://rate.bot.com.tw/gold/chart/year/TWD')
             ->andReturn($request);
 
+        $request
+            ->shouldReceive('hasHeader')
+            ->with('Accept-Language')
+            ->andReturn(false)
+
+            ->shouldReceive('withHeader')
+            ->with('Accept-Language', 'zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4')
+            ->andReturn($request);
+
         $httpClient
             ->shouldReceive('sendRequest')
             ->with($request)
