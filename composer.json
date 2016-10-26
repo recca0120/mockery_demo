@@ -12,6 +12,7 @@
     },
     "require": {
         "php-http/httplug": "^1.1",
-        "php-http/message-factory": "^1.0"
+        "php-http/message-factory": "^1.0",
+        "php-http/message": "^1.4"
     }
 }
