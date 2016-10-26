@@ -8,5 +8,8 @@
         "psr-4": {
             "Recca0120\\TaiwanBank\\": "src/"
         }
+    },
+    "require": {
+        "php-http/httplug": "^1.1"
     }
 }
