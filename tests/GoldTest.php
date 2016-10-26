@@ -22,10 +22,16 @@ class GoldTest extends PHPUnit_Framework_TestCase
             ->andReturn($request);
 
         $httpClient
-            ->shouldReceive('sendRequest')->with($request)
+            ->shouldReceive('sendRequest')
+            ->with($request)
             ->andReturn($response);
+
+        $response
+            ->shouldReceive('getBody->getContents')
+            ->andReturn('fooHtml');
 
         $gold = new Gold($httpClient, $messageFactory);
         $html = $gold->getHtml();
+        
     }
 }
