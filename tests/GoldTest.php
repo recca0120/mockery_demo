@@ -20,6 +20,9 @@ class GoldTest extends PHPUnit_Framework_TestCase
             ->with('GET', 'http://rate.bot.com.tw/gold/chart/year/TWD')
             ->andReturn($request);
 
+        $httpClient
+            ->shouldReceive('sendRequest')->with($request);
+
         $gold = new Gold($httpClient, $messageFactory);
         $html = $gold->getHtml();
     }
