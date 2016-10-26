@@ -14,6 +14,9 @@ class GoldTest extends PHPUnit_Framework_TestCase
         $httpClient = m::mock('Http\Client\HttpClient');
         $messageFactory = m::mock('Http\Message\MessageFactory');
 
+        $messageFactory
+            ->shouldReceive('createRequest')->with('GET', 'http://rate.bot.com.tw/gold/chart/year/TWD');
+
         $gold = new Gold($httpClient, $messageFactory);
         $html = $gold->getHtml();
     }
