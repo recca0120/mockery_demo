@@ -1,0 +1,3531 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>臺灣銀行歷史黃金存摺牌價（日期範圍）</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="臺灣銀行匯率利率黃金牌價查詢">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+        <meta name="robots" content="index,follow" />
+
+    <link rel="icon" tpye="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/Content/css/font-awesome.min.css">
+
+
+        <link rel="stylesheet" href="/Content/main.css?2.2.2">
+    <style>
+        h1 {
+            margin: 0.7em 0 0.5em 0;
+        }
+
+            h1.hero__header {
+                font-size: 30px;
+                margin: 10px 0;
+            }
+
+            h1.hero__header_small {
+                font-size: 26px;
+                margin: 12px 0;
+            }
+
+            h1.hero__header_eng {
+                font-size: 20px;
+                margin: -8px 0;
+            }
+
+        .chart-key-value .sp {
+            position: relative;
+            top: 2px;
+        }
+
+        body {
+            font-family: 微軟正黑體, Arial, serif;
+            font-size: large;
+        }
+
+        select[name=month], select[name=day] {
+            width: 5em;
+        }
+
+        :lang(en-US) {
+            font-family: "Book-Antiqua",微軟正黑體;
+        }
+
+        .display_none_print_show {
+            display: none;
+        }
+
+        .logo_div {
+            display: none;
+        }
+
+        .form-horizontal {
+            background-color: #fcf6f5;
+            border: 1px solid #8A0050;
+            border-radius: 4px;
+        }
+
+        legend {
+            padding-left: 1em;
+        }
+
+        .dl-horizontal ol li, .dl-horizontal dt, .well ol li, .well p, .well span, .well div {
+            font-size: 16px;
+        }
+
+        .highcharts-button {
+            display: none;
+        }
+
+        .wordwrap {
+            word-break: break-all;
+        }
+
+        .fa {
+            font: normal normal normal 14px/1 FontAwesome !important;
+        }
+    </style>
+    <style>
+
+      .dl-horizontal ol {color: }
+    </style>
+
+
+    <script src="/Scripts/html5shiv.min.js"></script>
+    <script src="/Scripts/respond.min.js"></script>
+
+
+    <script src="/Scripts/css3-mediaqueries.js"></script>
+
+    <style>
+        .nav_ctn img {
+            float: left;
+        }
+        /* Style The Dropdown Button */
+        .dropbtn {
+            background-color: black;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            /*margin: 16px 16px 0 0;*/
+            margin: 16px 0px 0 0;
+            border: 2px solid #BA5E95;
+            border-radius: 7px;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #ba5e95;
+                    color: white;
+                }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: white;
+            color: #8a0050;
+        }
+
+        /*hasscript*/
+        table th.noscript, .noscript {
+            display: none;
+        }
+
+        table td.noscript, .noscript {
+            display: none;
+        }
+    </style>
+
+    <noscript>
+        <style>
+            table th.noscript {
+                display: table-cell;
+            }
+
+            table th.hasscript {
+                display: none;
+            }
+
+            table td.noscript {
+                display: table-cell;
+            }
+
+            table td.hasscript {
+                display: none;
+            }
+
+            .btn.noscript {
+                display: inline-block;
+            }
+
+            .btn.hasscript {
+                display: none;
+            }
+
+            .hasscript-div {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+<body class="undefined">
+    <div class="page-wrapper">
+        <main role="main" class="main">
+
+            <div class="container">
+            </div>
+            <div class="hero container">
+                <nav style="height:inherit;">
+                    <div style="height:inherit;width:100%" class="nav_ctn">
+
+                        <div class="hidden-print" style="height:inherit; max-height:80px; padding-top: 9px; padding-left: 9px">
+                            <image style="height:90%;" alt="臺灣銀行logo" title="臺灣銀行logo" src="/Content/images/logo.png"></image>
+                        </div>
+                        <div class="TitleLang">
+                            <div class="dropdown_lang_Select hidden-print">
+                                <div style="float:right">
+                                    <select id="lang_ddl" style="width:100px;" class="lang_ddl hasscript-div">
+                                        <option value="zh-TW">正體中文</option>
+                                        <option value="zh-CN">简体中文</option>
+                                        <option value="en-US">English</option>
+                                    </select>
+                                    <noscript>
+                                        <ul style="width:80px; text-align:right;">
+                                            <li><a href="?Lang=zh-TW">正體中文</a></li>
+
+                                        </ul>
+                                    </noscript>
+                                </div>
+                            </div>
+                            <div class="dropdown_lang_CSS">
+                                <div style="float:right">
+                                    <div class="dropdown dropdown_lang hasscript-div">
+                                        <button class="dropbtn" id="lang_ddl_phone">中</button>
+                                        <div class="dropdown-content">
+                                            <a class="lang_ddl_css" value="zh-TW">正體中文</a>
+                                            <a class="lang_ddl_css" value="zh-CN">简体中文</a>
+                                            <a class="lang_ddl_css" value="en-US">English</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="container H1_div_ctrl">
+                <div class="logo_div">
+
+                    <image alt="臺灣銀行logo" title="臺灣銀行logo" width="200px" src="/Content/images/logo_color.png"></image>
+                </div>
+                        <h1>
+                            <span class="logo"></span>
+                            <span id="h1_small_id" style="color:blue"></span>
+                            <span id="h1_id"><nobr>歷史營業時間黃金存摺牌價</nobr></span>
+                        </h1>
+
+            </div>
+
+
+
+
+
+<style>
+    .table > tbody > tr > td {
+        text-align: center!important;
+    }
+</style>
+<div class="container">
+        <div class="row chart-key-values">
+            <div class="span4">
+                <div class="chart-key-value">
+                        <div class="key">查詢期間</div>
+                    <div class="value">2015/10/27 - 2016/10/26</div>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="chart-key-value">
+                    <div class="key">查詢幣別</div>
+                    <div class="value"><span title="幣別國旗" class="sp sp-taiwan"></span> 新台幣 (TWD)</div>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="chart-key-value">
+                    <div class="key">查詢項目</div>
+                    <div class="value">營業時間黃金存摺牌價</div>
+                </div>
+            </div>
+        </div>
+        <div data-fetch="/goldplot/year/TWD/both/0?Lang=zh-TW&session_id=" data-chart-title="黃金存摺牌價" data-chart="opposite" data-x-title="日期" class="canvas chart"></div>
+            <div class="cf visible-phone">
+                <div class="pull-left trailer">單位：新台幣 (TWD)/1公克</div>
+            </div>
+        <table class="table table-striped table-bordered table-condensed table-hover toggle-circle" title="歷史營業時間黃金存摺牌價" summary="此表格是歷史營業時間黃金存摺牌價，表格分為五直欄，第一直欄是時間，第二直欄是牌價幣別，第三直欄是商品重量，第四直欄是本行買入價格，第五直欄是本行賣出價格。">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th class="hidden-phone">牌價幣別</th>
+                    <th class="hidden-phone">商品重量</th>
+                    <th>本行買入價格</th>
+                    <th>本行賣出價格</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-26/TWD/>2016/10/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1286</td>
+                        <td class="text-right">1302</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-25/TWD/>2016/10/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1278</td>
+                        <td class="text-right">1294</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-24/TWD/>2016/10/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1280</td>
+                        <td class="text-right">1296</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-21/TWD/>2016/10/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1275</td>
+                        <td class="text-right">1291</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-20/TWD/>2016/10/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1277</td>
+                        <td class="text-right">1293</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-19/TWD/>2016/10/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1285</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-18/TWD/>2016/10/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1276</td>
+                        <td class="text-right">1292</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-17/TWD/>2016/10/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1272</td>
+                        <td class="text-right">1288</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-14/TWD/>2016/10/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1270</td>
+                        <td class="text-right">1286</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-13/TWD/>2016/10/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1278</td>
+                        <td class="text-right">1294</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-12/TWD/>2016/10/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1284</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-11/TWD/>2016/10/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1272</td>
+                        <td class="text-right">1288</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-07/TWD/>2016/10/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1262</td>
+                        <td class="text-right">1277</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-06/TWD/>2016/10/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1285</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-05/TWD/>2016/10/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1275</td>
+                        <td class="text-right">1291</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-04/TWD/>2016/10/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1311</td>
+                        <td class="text-right">1327</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-10-03/TWD/>2016/10/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1319</td>
+                        <td class="text-right">1335</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-30/TWD/>2016/09/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1326</td>
+                        <td class="text-right">1342</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-29/TWD/>2016/09/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1324</td>
+                        <td class="text-right">1340</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-26/TWD/>2016/09/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1341</td>
+                        <td class="text-right">1357</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-23/TWD/>2016/09/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1336</td>
+                        <td class="text-right">1352</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-22/TWD/>2016/09/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1336</td>
+                        <td class="text-right">1352</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-21/TWD/>2016/09/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1326</td>
+                        <td class="text-right">1342</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-20/TWD/>2016/09/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1319</td>
+                        <td class="text-right">1335</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-19/TWD/>2016/09/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1322</td>
+                        <td class="text-right">1338</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-14/TWD/>2016/09/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1338</td>
+                        <td class="text-right">1354</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-13/TWD/>2016/09/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1345</td>
+                        <td class="text-right">1361</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-12/TWD/>2016/09/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1348</td>
+                        <td class="text-right">1365</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-10/TWD/>2016/09/10</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1336</td>
+                        <td class="text-right">1357</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-09/TWD/>2016/09/09</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1343</td>
+                        <td class="text-right">1359</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-08/TWD/>2016/09/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1346</td>
+                        <td class="text-right">1362</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-07/TWD/>2016/09/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1346</td>
+                        <td class="text-right">1362</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-06/TWD/>2016/09/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1334</td>
+                        <td class="text-right">1350</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-05/TWD/>2016/09/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1335</td>
+                        <td class="text-right">1351</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-02/TWD/>2016/09/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1328</td>
+                        <td class="text-right">1344</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-09-01/TWD/>2016/09/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1325</td>
+                        <td class="text-right">1341</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-31/TWD/>2016/08/31</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1331</td>
+                        <td class="text-right">1347</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-30/TWD/>2016/08/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1338</td>
+                        <td class="text-right">1354</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-29/TWD/>2016/08/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1339</td>
+                        <td class="text-right">1355</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-26/TWD/>2016/08/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1340</td>
+                        <td class="text-right">1356</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-25/TWD/>2016/08/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1342</td>
+                        <td class="text-right">1358</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-24/TWD/>2016/08/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1356</td>
+                        <td class="text-right">1373</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-23/TWD/>2016/08/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1359</td>
+                        <td class="text-right">1376</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-22/TWD/>2016/08/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1355</td>
+                        <td class="text-right">1372</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-19/TWD/>2016/08/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1360</td>
+                        <td class="text-right">1377</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-18/TWD/>2016/08/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1355</td>
+                        <td class="text-right">1372</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-17/TWD/>2016/08/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1347</td>
+                        <td class="text-right">1364</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-16/TWD/>2016/08/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1346</td>
+                        <td class="text-right">1362</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-15/TWD/>2016/08/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1343</td>
+                        <td class="text-right">1359</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-12/TWD/>2016/08/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1344</td>
+                        <td class="text-right">1360</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-11/TWD/>2016/08/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1345</td>
+                        <td class="text-right">1361</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-10/TWD/>2016/08/10</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1347</td>
+                        <td class="text-right">1363</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-09/TWD/>2016/08/09</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1337</td>
+                        <td class="text-right">1353</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-08/TWD/>2016/08/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1343</td>
+                        <td class="text-right">1359</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-05/TWD/>2016/08/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1372</td>
+                        <td class="text-right">1389</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-04/TWD/>2016/08/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1366</td>
+                        <td class="text-right">1383</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-03/TWD/>2016/08/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1382</td>
+                        <td class="text-right">1399</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-02/TWD/>2016/08/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1371</td>
+                        <td class="text-right">1388</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-08-01/TWD/>2016/08/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1361</td>
+                        <td class="text-right">1378</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-29/TWD/>2016/07/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1359</td>
+                        <td class="text-right">1376</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-28/TWD/>2016/07/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1368</td>
+                        <td class="text-right">1385</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-27/TWD/>2016/07/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1350</td>
+                        <td class="text-right">1367</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-26/TWD/>2016/07/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1353</td>
+                        <td class="text-right">1370</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-25/TWD/>2016/07/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1351</td>
+                        <td class="text-right">1368</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-22/TWD/>2016/07/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1356</td>
+                        <td class="text-right">1373</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-21/TWD/>2016/07/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1348</td>
+                        <td class="text-right">1365</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-20/TWD/>2016/07/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1357</td>
+                        <td class="text-right">1374</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-19/TWD/>2016/07/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1358</td>
+                        <td class="text-right">1375</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-18/TWD/>2016/07/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1355</td>
+                        <td class="text-right">1372</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-15/TWD/>2016/07/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1360</td>
+                        <td class="text-right">1377</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-14/TWD/>2016/07/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1364</td>
+                        <td class="text-right">1381</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-13/TWD/>2016/07/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1377</td>
+                        <td class="text-right">1394</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-12/TWD/>2016/07/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1395</td>
+                        <td class="text-right">1412</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-11/TWD/>2016/07/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1399</td>
+                        <td class="text-right">1416</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-07/TWD/>2016/07/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1408</td>
+                        <td class="text-right">1425</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-06/TWD/>2016/07/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1411</td>
+                        <td class="text-right">1428</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-05/TWD/>2016/07/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1383</td>
+                        <td class="text-right">1400</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-04/TWD/>2016/07/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1387</td>
+                        <td class="text-right">1404</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-07-01/TWD/>2016/07/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1369</td>
+                        <td class="text-right">1386</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-30/TWD/>2016/06/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1353</td>
+                        <td class="text-right">1370</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-29/TWD/>2016/06/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1364</td>
+                        <td class="text-right">1381</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-28/TWD/>2016/06/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1360</td>
+                        <td class="text-right">1377</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-27/TWD/>2016/06/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1374</td>
+                        <td class="text-right">1391</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-24/TWD/>2016/06/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1365</td>
+                        <td class="text-right">1382</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-23/TWD/>2016/06/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1305</td>
+                        <td class="text-right">1320</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-22/TWD/>2016/06/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1302</td>
+                        <td class="text-right">1318</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-21/TWD/>2016/06/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1320</td>
+                        <td class="text-right">1336</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-20/TWD/>2016/06/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1323</td>
+                        <td class="text-right">1339</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-17/TWD/>2016/06/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1326</td>
+                        <td class="text-right">1342</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-16/TWD/>2016/06/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1352</td>
+                        <td class="text-right">1369</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-15/TWD/>2016/06/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1331</td>
+                        <td class="text-right">1347</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-14/TWD/>2016/06/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1324</td>
+                        <td class="text-right">1340</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-13/TWD/>2016/06/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1324</td>
+                        <td class="text-right">1340</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-08/TWD/>2016/06/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1286</td>
+                        <td class="text-right">1302</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-07/TWD/>2016/06/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1283</td>
+                        <td class="text-right">1299</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-06/TWD/>2016/06/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1283</td>
+                        <td class="text-right">1299</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-04/TWD/>2016/06/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1293</td>
+                        <td class="text-right">1314</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-03/TWD/>2016/06/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1264</td>
+                        <td class="text-right">1279</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-02/TWD/>2016/06/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1284</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-06-01/TWD/>2016/06/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1268</td>
+                        <td class="text-right">1283</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-31/TWD/>2016/05/31</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1260</td>
+                        <td class="text-right">1275</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-30/TWD/>2016/05/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1256</td>
+                        <td class="text-right">1271</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-27/TWD/>2016/05/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1285</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-26/TWD/>2016/05/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1278</td>
+                        <td class="text-right">1294</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-25/TWD/>2016/05/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1279</td>
+                        <td class="text-right">1295</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-24/TWD/>2016/05/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1298</td>
+                        <td class="text-right">1314</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-23/TWD/>2016/05/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1305</td>
+                        <td class="text-right">1321</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-20/TWD/>2016/05/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1312</td>
+                        <td class="text-right">1328</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-19/TWD/>2016/05/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1314</td>
+                        <td class="text-right">1330</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-18/TWD/>2016/05/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1326</td>
+                        <td class="text-right">1342</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-17/TWD/>2016/05/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1328</td>
+                        <td class="text-right">1344</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-16/TWD/>2016/05/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1338</td>
+                        <td class="text-right">1354</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-13/TWD/>2016/05/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1325</td>
+                        <td class="text-right">1341</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-12/TWD/>2016/05/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1318</td>
+                        <td class="text-right">1334</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-11/TWD/>2016/05/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1321</td>
+                        <td class="text-right">1337</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-10/TWD/>2016/05/10</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1315</td>
+                        <td class="text-right">1331</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-09/TWD/>2016/05/09</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1321</td>
+                        <td class="text-right">1337</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-06/TWD/>2016/05/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1323</td>
+                        <td class="text-right">1339</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-05/TWD/>2016/05/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1320</td>
+                        <td class="text-right">1336</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-04/TWD/>2016/05/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1324</td>
+                        <td class="text-right">1340</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-05-03/TWD/>2016/05/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1332</td>
+                        <td class="text-right">1348</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-29/TWD/>2016/04/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1311</td>
+                        <td class="text-right">1327</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-28/TWD/>2016/04/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1293</td>
+                        <td class="text-right">1309</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-27/TWD/>2016/04/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1287</td>
+                        <td class="text-right">1303</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-26/TWD/>2016/04/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1274</td>
+                        <td class="text-right">1290</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-25/TWD/>2016/04/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1274</td>
+                        <td class="text-right">1290</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-22/TWD/>2016/04/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1284</td>
+                        <td class="text-right">1300</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-21/TWD/>2016/04/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1297</td>
+                        <td class="text-right">1313</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-20/TWD/>2016/04/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1284</td>
+                        <td class="text-right">1300</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-19/TWD/>2016/04/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1285</td>
+                        <td class="text-right">1301</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-18/TWD/>2016/04/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1280</td>
+                        <td class="text-right">1296</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-15/TWD/>2016/04/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1270</td>
+                        <td class="text-right">1286</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-14/TWD/>2016/04/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1277</td>
+                        <td class="text-right">1293</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-13/TWD/>2016/04/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1287</td>
+                        <td class="text-right">1303</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-12/TWD/>2016/04/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1300</td>
+                        <td class="text-right">1316</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-11/TWD/>2016/04/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1295</td>
+                        <td class="text-right">1311</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-08/TWD/>2016/04/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1275</td>
+                        <td class="text-right">1291</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-07/TWD/>2016/04/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1285</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-06/TWD/>2016/04/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1271</td>
+                        <td class="text-right">1287</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-04-01/TWD/>2016/04/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1272</td>
+                        <td class="text-right">1288</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-31/TWD/>2016/03/31</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1266</td>
+                        <td class="text-right">1281</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-30/TWD/>2016/03/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1282</td>
+                        <td class="text-right">1298</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-29/TWD/>2016/03/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1268</td>
+                        <td class="text-right">1283</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-28/TWD/>2016/03/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1267</td>
+                        <td class="text-right">1286</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-25/TWD/>2016/03/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1269</td>
+                        <td class="text-right">1289</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-24/TWD/>2016/03/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1267</td>
+                        <td class="text-right">1282</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-23/TWD/>2016/03/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1281</td>
+                        <td class="text-right">1297</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-22/TWD/>2016/03/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1296</td>
+                        <td class="text-right">1312</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-21/TWD/>2016/03/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1289</td>
+                        <td class="text-right">1305</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-18/TWD/>2016/03/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1304</td>
+                        <td class="text-right">1320</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-17/TWD/>2016/03/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1310</td>
+                        <td class="text-right">1326</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-16/TWD/>2016/03/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1294</td>
+                        <td class="text-right">1310</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-15/TWD/>2016/03/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1285</td>
+                        <td class="text-right">1301</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-14/TWD/>2016/03/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1313</td>
+                        <td class="text-right">1329</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-11/TWD/>2016/03/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1329</td>
+                        <td class="text-right">1345</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-10/TWD/>2016/03/10</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1310</td>
+                        <td class="text-right">1326</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-09/TWD/>2016/03/09</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1321</td>
+                        <td class="text-right">1337</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-08/TWD/>2016/03/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1328</td>
+                        <td class="text-right">1344</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-07/TWD/>2016/03/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1319</td>
+                        <td class="text-right">1335</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-04/TWD/>2016/03/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1320</td>
+                        <td class="text-right">1336</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-03/TWD/>2016/03/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1306</td>
+                        <td class="text-right">1322</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-02/TWD/>2016/03/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1295</td>
+                        <td class="text-right">1311</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-03-01/TWD/>2016/03/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1312</td>
+                        <td class="text-right">1328</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-26/TWD/>2016/02/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1312</td>
+                        <td class="text-right">1328</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-25/TWD/>2016/02/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1312</td>
+                        <td class="text-right">1328</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-24/TWD/>2016/02/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1297</td>
+                        <td class="text-right">1313</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-23/TWD/>2016/02/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1293</td>
+                        <td class="text-right">1309</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-22/TWD/>2016/02/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1290</td>
+                        <td class="text-right">1306</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-19/TWD/>2016/02/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1299</td>
+                        <td class="text-right">1315</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-18/TWD/>2016/02/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1280</td>
+                        <td class="text-right">1296</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-17/TWD/>2016/02/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1282</td>
+                        <td class="text-right">1298</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-16/TWD/>2016/02/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1272</td>
+                        <td class="text-right">1288</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-15/TWD/>2016/02/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1278</td>
+                        <td class="text-right">1294</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-05/TWD/>2016/02/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1227</td>
+                        <td class="text-right">1242</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-04/TWD/>2016/02/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1216</td>
+                        <td class="text-right">1231</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-03/TWD/>2016/02/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1205</td>
+                        <td class="text-right">1220</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-02/TWD/>2016/02/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1199</td>
+                        <td class="text-right">1214</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-02-01/TWD/>2016/02/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1198</td>
+                        <td class="text-right">1213</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-30/TWD/>2016/01/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1186</td>
+                        <td class="text-right">1206</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-29/TWD/>2016/01/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1188</td>
+                        <td class="text-right">1202</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-28/TWD/>2016/01/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1199</td>
+                        <td class="text-right">1214</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-27/TWD/>2016/01/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1198</td>
+                        <td class="text-right">1213</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-26/TWD/>2016/01/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1196</td>
+                        <td class="text-right">1211</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-25/TWD/>2016/01/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1179</td>
+                        <td class="text-right">1193</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-22/TWD/>2016/01/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1176</td>
+                        <td class="text-right">1190</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-21/TWD/>2016/01/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1190</td>
+                        <td class="text-right">1204</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-20/TWD/>2016/01/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1176</td>
+                        <td class="text-right">1190</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-19/TWD/>2016/01/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1170</td>
+                        <td class="text-right">1184</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-18/TWD/>2016/01/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1170</td>
+                        <td class="text-right">1184</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-15/TWD/>2016/01/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1163</td>
+                        <td class="text-right">1177</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-14/TWD/>2016/01/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1165</td>
+                        <td class="text-right">1179</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-13/TWD/>2016/01/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1154</td>
+                        <td class="text-right">1168</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-12/TWD/>2016/01/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1169</td>
+                        <td class="text-right">1183</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-11/TWD/>2016/01/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1178</td>
+                        <td class="text-right">1192</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-08/TWD/>2016/01/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1170</td>
+                        <td class="text-right">1184</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-07/TWD/>2016/01/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1168</td>
+                        <td class="text-right">1182</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-06/TWD/>2016/01/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1145</td>
+                        <td class="text-right">1159</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-05/TWD/>2016/01/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1138</td>
+                        <td class="text-right">1152</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2016-01-04/TWD/>2016/01/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1129</td>
+                        <td class="text-right">1143</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-31/TWD/>2015/12/31</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1115</td>
+                        <td class="text-right">1129</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-30/TWD/>2015/12/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1124</td>
+                        <td class="text-right">1138</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-29/TWD/>2015/12/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1139</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-28/TWD/>2015/12/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1141</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-25/TWD/>2015/12/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1144</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-24/TWD/>2015/12/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1126</td>
+                        <td class="text-right">1140</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-23/TWD/>2015/12/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1127</td>
+                        <td class="text-right">1140</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-22/TWD/>2015/12/22</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1132</td>
+                        <td class="text-right">1146</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-21/TWD/>2015/12/21</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1122</td>
+                        <td class="text-right">1136</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-18/TWD/>2015/12/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1111</td>
+                        <td class="text-right">1124</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-17/TWD/>2015/12/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1120</td>
+                        <td class="text-right">1134</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-16/TWD/>2015/12/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1116</td>
+                        <td class="text-right">1130</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-15/TWD/>2015/12/15</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1114</td>
+                        <td class="text-right">1128</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-14/TWD/>2015/12/14</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1127</td>
+                        <td class="text-right">1140</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-11/TWD/>2015/12/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1139</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-10/TWD/>2015/12/10</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1139</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-09/TWD/>2015/12/09</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1130</td>
+                        <td class="text-right">1144</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-08/TWD/>2015/12/08</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1126</td>
+                        <td class="text-right">1140</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-07/TWD/>2015/12/07</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1132</td>
+                        <td class="text-right">1146</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-04/TWD/>2015/12/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1110</td>
+                        <td class="text-right">1123</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-03/TWD/>2015/12/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1103</td>
+                        <td class="text-right">1116</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-02/TWD/>2015/12/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1116</td>
+                        <td class="text-right">1130</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-12-01/TWD/>2015/12/01</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1121</td>
+                        <td class="text-right">1134</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-30/TWD/>2015/11/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1101</td>
+                        <td class="text-right">1114</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-27/TWD/>2015/11/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1114</td>
+                        <td class="text-right">1128</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-26/TWD/>2015/11/26</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1114</td>
+                        <td class="text-right">1128</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-25/TWD/>2015/11/25</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1122</td>
+                        <td class="text-right">1136</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-24/TWD/>2015/11/24</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1119</td>
+                        <td class="text-right">1133</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-23/TWD/>2015/11/23</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1119</td>
+                        <td class="text-right">1133</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-20/TWD/>2015/11/20</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1130</td>
+                        <td class="text-right">1144</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-19/TWD/>2015/11/19</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1139</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-18/TWD/>2015/11/18</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1125</td>
+                        <td class="text-right">1139</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-17/TWD/>2015/11/17</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1131</td>
+                        <td class="text-right">1145</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-16/TWD/>2015/11/16</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1151</td>
+                        <td class="text-right">1165</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-13/TWD/>2015/11/13</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1133</td>
+                        <td class="text-right">1147</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-12/TWD/>2015/11/12</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1136</td>
+                        <td class="text-right">1150</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-11/TWD/>2015/11/11</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1141</td>
+                        <td class="text-right">1155</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-10/TWD/>2015/11/10</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1144</td>
+                        <td class="text-right">1158</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-09/TWD/>2015/11/09</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1141</td>
+                        <td class="text-right">1155</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-06/TWD/>2015/11/06</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1152</td>
+                        <td class="text-right">1166</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-05/TWD/>2015/11/05</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1150</td>
+                        <td class="text-right">1164</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-04/TWD/>2015/11/04</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1158</td>
+                        <td class="text-right">1172</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-03/TWD/>2015/11/03</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1178</td>
+                        <td class="text-right">1192</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-11-02/TWD/>2015/11/02</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1186</td>
+                        <td class="text-right">1200</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-10-30/TWD/>2015/10/30</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1191</td>
+                        <td class="text-right">1206</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-10-29/TWD/>2015/10/29</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1205</td>
+                        <td class="text-right">1220</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-10-28/TWD/>2015/10/28</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1212</td>
+                        <td class="text-right">1227</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><a href=/gold/chart/2015-10-27/TWD/>2015/10/27</a></td>
+                        <td class="text-center hidden-phone">新台幣 (TWD)</td>
+                        <td class="text-center hidden-phone">1公克</td>
+                        <td class="text-right">1206</td>
+                        <td class="text-right">1221</td>
+                    </tr>
+            </tbody>
+        </table>
+    <div class="text-center">
+        <div class="btn-group">
+   <a href="/gold/csv/year/TWD/0" class="btn">下載 Excel 檔</a>             <a class="btn click_back">返回上頁</a>
+            <button type="button" class="btn click_print">列印本頁</button>
+        </div>
+    </div>
+    <noscript>
+        <ul style="text-align:left; padding-left:3em;">
+            <li>列印本頁請按Ctrl + P</li>
+            <li>取得新報價請按F5</li>
+            <li>返回上頁請按Backspace鍵或Alt+向左鍵</li>
+        </ul>
+    </noscript>
+</div>
+            <div class="container doPrintDiv" style="display:none;">
+                <button class="btn doPrintBtn" style="display:none">
+                    列印本頁
+                </button>
+                <button class="btn doCloseBtn" style="display:none">
+                    關閉本頁
+                </button>
+            </div>
+
+
+
+
+        </main>
+    </div>
+    <div class="text-center">
+        <br>
+        <svg class="icon icon-facebook" style="width: 2em; height: 2em">
+            <use xlink:href="#icon-facebook"></use>
+        </svg>
+        <svg class="icon icon-twitter" style="width: 2em; height: 2em">
+            <use xlink:href="#icon-twitter"></use>
+        </svg>
+    </div>
+    <script>
+        if (!Function.prototype.bind) {
+            Function.prototype.bind = function (oThis) {
+                if (typeof this !== 'function') {
+                    // closest thing possible to the ECMAScript 5
+                    // internal IsCallable function
+                    throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+                }
+
+                var aArgs = Array.prototype.slice.call(arguments, 1),
+                    fToBind = this,
+                    fNOP = function () { },
+                    fBound = function () {
+                        return fToBind.apply(this instanceof fNOP && oThis
+                               ? this
+                               : oThis,
+                               aArgs.concat(Array.prototype.slice.call(arguments)));
+                    };
+
+                fNOP.prototype = this.prototype;
+                fBound.prototype = new fNOP();
+
+                return fBound;
+            };
+        }
+    </script>
+        <script src="/Scripts/main.settings.js"></script>
+    <script>
+        var controller = 'gold'.toLowerCase();
+        //window.onunload = function () { };
+
+        //停用 Row Toggle 功能
+        function footable_off() {
+            $('.footable tr').off();
+            $('.footable td').off();
+        }
+        //判斷是否含中文
+        function isChinese(str) {
+            var patrn = /[\u4e00-\u9fff]/gi;
+            if (patrn.exec(str)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        var h1_size_from_css = parseInt($("#h1_id").css('font-size'));
+        //自適應H1大小
+        function minsize() {
+            if ($("#h1_id").width() > $(".container").width()) {
+                $("#h1_id").css('font-size', parseInt($("#h1_id").css('font-size')) - 1 + 'px');
+                $("#h1_small_id").css('font-size', parseInt($("#h1_small_id").css('font-size')) - 1 + 'px');
+                //h1_small_id
+            } else if (parseInt($("#h1_id").css('font-size')) + $("#h1_id").width() < $(".container").width()) {
+                if (parseInt($("#h1_id").css('font-size')) < h1_size_from_css) {
+                    $("#h1_id").css('font-size', parseInt($("#h1_id").css('font-size')) + 1 + 'px');
+                    $("#h1_small_id").css('font-size', parseInt($("#h1_small_id").css('font-size')) + 1 + 'px');
+                }
+            } else {
+
+            }
+        }
+        var h1_margin_from_css = $(".hero__header").css("margin");
+        function setH1Size() {
+            var H1_Str = "歷史營業時間黃金存摺牌價";
+            if (isChinese(H1_Str)) {
+                //中文不破版縮小&放大
+                for (var i = 1; i < 10; i++) {
+                    window.setTimeout(function () {
+                        minsize();
+                    }, 1 * i);
+                }
+            } else {
+                //英文版防破版
+                //$("th").addClass("wordwrap");
+                //$("td").addClass("wordwrap");
+
+                //英文遇換行調整字高
+                //line-height
+                //if ($("#h1_id").height() > 35) {
+                //    $(".hero__header").css("margin", "-10px 0");
+                //} else {
+                //    $(".hero__header").css("margin", h1_margin_from_css);
+                //}
+            }
+        }
+
+        //設定說明標籤高&文字置中
+        function setRowChartKeyValuesMaxHeight() {
+            $('div.chart-key-value').each(function () {
+                $(this).find(".key").css("height", "");
+                $(this).find(".value").css("height", "");
+                $(this).find(".key").css("line-height", "");
+                $(this).find(".value").css("line-height", "");
+            })
+
+            var window_width = $(window).width();
+            if (window_width <= 750) {
+                //小版型：分開看，value高決定key高
+                $("div.chart-key-value").each(function () {
+                    if ($(this).find(".key").height() > $(this).find(".value").height()) {
+                        $(this).find(".value").height($(this).find(".key").height() + "px");
+                        $(this).find(".value").css("line-height", $(this).find(".key").height() + "px");
+                    } else {
+                        $(this).find(".key").height($(this).find(".value").height() + "px");
+                        $(this).find(".key").css("line-height", $(this).find(".value").height() + "px");
+                    }
+                });
+            } else {
+                //大版型：一起看，高統一看最高的
+                var key_value_highest = 0;
+                //找出最高
+                $('div.chart-key-value').each(function () {
+                    if ($(this).find(".key").height() > key_value_highest) {
+                        key_value_highest = $(this).find(".key").height();
+                    }
+                    if ($(this).find(".value").height() > key_value_highest) {
+                        key_value_highest = $(this).find(".value").height();
+                    }
+                })
+
+                $('div.chart-key-value').each(function () {
+                    if ($(this).find(".key").height() != key_value_highest) {
+                        var key_value_height = 32 * (key_value_highest / $(this).find(".key").height());
+                        $(this).find(".key").css("line-height", key_value_height + "px");
+                    }
+                    if ($(this).find(".value").height() != key_value_highest) {
+                        var key_value_height = 32 * (key_value_highest / $(this).find(".value").height());
+                        $(this).find(".value").css("line-height", key_value_height + "px");
+                    }
+                    $(this).find(".key").height(key_value_highest + "px");
+                    $(this).find(".value").height(key_value_highest + "px");
+                });
+            }
+        }
+
+        function blurcommafy(num) {
+            if (num.split(".").length == 1) {
+                num = commafy(num);
+            } else if (num.split(".").length == 2) {
+                //小數部份不用加千分位
+                num = commafy(num.split(".")[0]) + "." + num.split(".")[1];
+            }
+            return num;
+        }
+
+        //加上千分位
+        function commafy(num) {
+            num = num + "";
+            var re = /(-?\d+)(\d{3})/
+            while (re.test(num)) {
+                num = num.replace(re, "$1,$2")
+            }
+            return num;
+        }
+        //移除千分位
+        function removeCommafy(num) {
+            return num.replace(/[,]+/g, "");
+        }
+
+        //RWD加入千分位
+        function tableAddCommafy() {
+            $(".table > tbody > tr > td").each(function () {
+                var td = $(this).text();
+                if (!isNaN(td)) {
+                    if (td.split(".").length == 1) {
+                        $(this).text(commafy(td));
+                    } else if (td.split(".").length == 2) {
+                        //小數部份不用加千分位
+                        $(this).text(commafy(td.split(".")[0]) + "." + td.split(".")[1]);
+                    }
+                }
+            })
+        }
+
+        //小數尾去0
+        function removeTableDoubleZero() {
+            $(".table > tbody > tr > td").each(function () {
+                var td = $(this).text();
+                if (!isNaN(td)) {
+                    if (td.split(".").length == 1) {
+                        $(this).text(commafy(td));
+                    } else if (td.split(".").length == 2) {
+                        //小數部份不用加千分位
+                        //小數尾去0
+                        if (td.split(".")[1].replace(/0+$/, '') == "") {
+                            $(this).text(commafy(td.split(".")[0]));
+                        } else {
+                            $(this).text(commafy(td.split(".")[0]) + "." + td.split(".")[1].replace(/0+$/, ''));
+                        }
+                    }
+                }
+            })
+        }
+
+        //判斷瀏覽器類型
+        function detectBrowser() {
+            var Sys = {};
+            var ua = navigator.userAgent.toLowerCase();
+            var s;
+            (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] :
+            (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+            (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+            (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+            (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+            (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+
+            if (Sys.ie) return "IE";
+            if (Sys.firefox) return "Firefox";
+            if (Sys.chrome) return "Chrome";
+            if (Sys.opera) return "Opera";
+            if (Sys.safari) return "Safari";
+        }
+
+        //xrt/all頁面table 第一行 th 隱藏
+        function hideTableTh() {
+            var all_width = $(window).width();//console.log(all_width);
+            if (all_width < 980) {
+                $(".tablet_hide").hide();
+            } else {
+                $(".tablet_hide").show();
+            }
+
+            if (all_width < 480) {
+                $(".phone_hide").hide();
+            } else {
+                $(".phone_hide").show();
+            }
+        }
+
+        //設定語系位置
+        function setTitleLangDiv() {
+            //ie8不使用 其他要用
+            if (!-[1, ]) {
+                $(".TitleLang").addClass("TitleLangDivIE");
+            }
+            else {
+                $(".TitleLang").addClass("TitleLangDiv");
+            }
+        }
+
+        //寬小於768px的手機 TABLE靠邊貼齊
+        //這邊一定要用class指定，不可直接用table，不然emarketing進來的table也會被動到，造成手機版破版。
+        function setTableWidthInMiniPhone() {
+            var window_width = $(window).width();
+            if (window_width <= 767) {
+                $(".table").css("width", window_width - 2);
+                $(".table").css("margin-right", "-20px");
+                $(".table").css("margin-left", "-20px");
+            } else {
+                $(".table").css("width", "");
+                $(".table").css("margin-right", "");
+                $(".table").css("margin-left", "");
+            }
+        }
+
+        //加上列印style
+        function setPrintStyle() {
+
+            /*main.css*/
+            $(".visible-print").show();
+            $(".hidden-print").hide();
+            $("blockquote").css("page-break-inside", "avoid");
+            $("img").css("page-break-inside", "avoid");
+            $("pre").css("page-break-inside", "avoid");
+            $("tr").css("page-break-inside", "avoid");
+            //$("*").css({
+            //    "background": "0 0 !important",
+            //"color": "#000 !important",
+            //"box-shadow": "none !important",
+            //"text-shadow": "none !important"
+            //});
+            $("a").css("text-decoration", "underline");
+            $("a:visited").css("text-decoration", "underline");
+            $("abbr[title]:after").css("content", "' (' attr(title) ')'");
+            $(".ir a:after").css("content", "");
+            $("a[href^='javascript:']:after").css("content", "");
+            $("a[href^='#']:after").css("content", "");
+            $("blockquote").css("border", "1px solid #999");
+            $("pre").css("border", "1px solid #999");
+            $("thead").css("display", "table-header-group");
+            $("img").css("max-width", "100% !important");
+
+            //$("@page").css({
+            //    "size": "A4",
+            //"margin": ".5cm"
+            //});
+            $("h2").css({
+                "orphans": "3",
+                "widows": "3"
+            });
+            $("h3").css({
+                "orphans": "3",
+                "widows": "3"
+            });
+            $("p").css({
+                "orphans": "3",
+                "widows": "3"
+            });
+            $(".H1_div_ctrl").show();
+            $("h2").css("page-break-after", "avoid");
+            $("h3").css("page-break-after", "avoid");
+
+            /*_layout*/
+            $(".display_none_print_show").show();
+            $(".print_hide").hide();
+            $(".logo_div").show();
+            $(".logo_div").css("margin-top", "-3em");
+            $(".dl-horizontal").hide();
+            $("dropdown").hide();
+            $(".dropbtn").hide();
+            $(".btn").hide();
+            $("table.table").css("border", "1px solid black !important");
+            $("table").css("border", "1px solid black !important");
+            $(".table th").css("border", "1px solid black !important");
+            $("th").css("border", "1px solid black !important");
+            $(".table td").css("border", "1px solid black !important");
+            $("td").css("border", "1px solid black !important");
+            $(".phone-unset-font").css("font-size", "large !important");
+            $(".phone-small-font").css("font-size", "large !important");
+
+            $(".nav_ctn").hide();
+            $(".hero").css("background-color", "white");
+            $(".hero").css("background-image", "linear-gradient(to right,white,white)");
+
+            $(".doPrintDiv").show();
+            $(".doPrintBtn").show();
+            $(".doCloseBtn").show();
+        }
+
+        /// 檢查輸入的日期是否是一個正確的日期格式：
+        /// 支持 yyyy-M-d、yyyy-MM-dd、yyyy/M/d、yyyy/MM/dd 四種輸入格式。
+        function CheckDate(strInputDate) {
+            if (strInputDate == "")
+                return false;
+            strInputDate = strInputDate.replace(/-/g, "/");
+            var d = new Date(strInputDate);
+            if (isNaN(d))
+                return false;
+            var arr = strInputDate.split("/");
+            return ((parseInt(arr[0], 10) == d.getFullYear()) && (parseInt(arr[1], 10) == (d.getMonth() + 1)) && (parseInt(arr[2], 10) == d.getDate()));
+        }
+
+        //比較幣別 防呆xrt/history xrt/obuhx 不可比較自己
+        function onCurrencySelectChange() {
+            $("select[name='compare'] span").each(function () {
+                $(this).showOption();
+            })
+            $("select[name='compare'] option").each(function () {
+                if ($(this).val() == $("select[name='currency']").val()) {
+                    $(this).hideOption();
+                }
+            })
+        }
+
+        $.fn.hideOption = function () {
+            var text = $(this).text(), val = this.value, span =
+            $('<span/>').text(text).val(val).hide()
+
+            var old = $(this).clone();
+            $(this).replaceWith(span)
+            $(span).data('ref', old);
+        }
+
+        $.fn.showOption = function () {
+            if ($(this).data('ref'))
+                $(this).replaceWith($(this).data('ref'))
+        }
+        window.mobileAndTabletcheck = function () {
+            var check = false;
+            (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true; })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        if (mobileAndTabletcheck()) {
+            $('.click_print').hide();
+        }
+        // Read a page's GET URL variables and return them as an associative array.
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        function getBreakPointType_5types(width) {
+            if (width < 480) {
+                return "phone"
+            } else if (width >= 480 && width < 600) {
+                return "tablet"
+            } else if (width >= 600 && width < 940) {
+                return "default600"
+            } else if (width >= 940 && width < 1170) {
+                return "default940"
+            } else {
+                //return "default1170"
+                return "default"
+            }
+        }
+
+        //最近一個營業日不可比較幣別，比較幣別為空時不顯示現金&即期
+        function search_range_check(search_range) {
+            if (search_range.val() == 'ltm' || search_range.val() == 'month' || search_range.val() == 'l6m' || search_range.val() == 'l1y' || search_range.val() == 'l3y') {
+                $('select[name=compare]').prop('disabled', false);
+                if ($('select[name=compare]').val()) { $('#datatype').show(); } else {
+                    $('#datatype').hide();
+                }
+            } else {
+                $('select[name=compare]').val('');
+                $('select[name=compare]').prop('disabled', 'disabled');
+                $('#datatype').hide();
+            }
+        }
+
+        //function onpageshowFn() {
+        //    //最近一個營業日不可比較幣別，比較幣別為空時不顯示現金&即期(for chrome)
+        //    //search_range_check($('input:radio:checked[name="search_range"]'));
+        //}
+
+        //去footable上面多的線&下面多的線
+        function footableHideNodataBottom() {
+            $(".footable-row-detail-row").each(function () {
+                if ($(this).find("div.footable-row-detail-name").html() == "") {
+                    $(this).hide();
+                }
+            })
+            $(".footable-row-detail-row:last-child").css("border-bottom", "0px #ddd solid");
+        }
+
+        //去除url中lang參數
+        function removeUrlLang(urlSearch) {
+            urlSearch = urlSearch.replace("?Lang=zh-TW&", "").replace("?Lang=en-US&", "").replace("?Lang=zh-CN&", "");
+            urlSearch = urlSearch.replace("?Lang=zh-TW", "").replace("?Lang=en-US", "").replace("?Lang=zh-CN", "");
+
+            urlSearch = urlSearch.replace("?lang=zh-TW&", "").replace("?lang=en-US&", "").replace("?lang=zh-CN&", "");
+            urlSearch = urlSearch.replace("?lang=zh-TW", "").replace("?lang=en-US", "").replace("?lang=zh-CN", "");
+
+            urlSearch = urlSearch.replace("?", "");
+            if (urlSearch != "") {
+                return "&" + urlSearch;
+            } else {
+                return urlSearch;
+            }
+        }
+
+        //觸發多語系連結
+        function ChangeLanguage(lang) {
+            switch (lang) {
+                case "zh-TW" || "zh-tw":
+                    if (location.search == "") {
+                        window.location.href = location.pathname + "?Lang=zh-TW";
+                    } else {
+                        window.location.href = location.pathname + "?Lang=zh-TW" + removeUrlLang(location.search);
+                    }
+                    break;
+                case "zh-CN" || "zh-cn":
+                    if (location.search == "") {
+                        window.location.href = location.pathname + "?Lang=zh-CN";
+                    } else {
+                        window.location.href = location.pathname + "?Lang=zh-CN" + removeUrlLang(location.search);
+                    }
+                    break;
+                case "en-US" || "en-us":
+                    if (location.search == "") {
+                        window.location.href = location.pathname + "?Lang=en-US";
+                    } else {
+                        window.location.href = location.pathname + "?Lang=en-US" + removeUrlLang(location.search);
+                    }
+                    break;
+            }
+        }
+
+        //xrt/obuhx查詢畫面title等高判定
+        function setFormTitleHigh() {
+            if ($('.container').width() > 768) {
+                $(".queryForm1 > fieldset > legend").height(40.2);
+                if ($(".queryForm1 > fieldset > legend").height() > $(".queryForm2 > fieldset > legend").height()) {
+                    $(".queryForm2 > fieldset > legend").height($(".queryForm1 > fieldset > legend").height());
+                } else if ($(".queryForm1 > fieldset > legend").height() < $(".queryForm2 > fieldset > legend").height()) {
+                    $(".queryForm1 > fieldset > legend").height($(".queryForm2 > fieldset > legend").height());
+                }
+            } else {
+                $(".queryForm1 > fieldset > legend").css("height", "");
+                $(".queryForm2 > fieldset > legend").css("height", "");
+            }
+        }
+
+        //cr/手機版rwd表格高調整
+        function setTableTitleHigh() {
+            if ($("tr.colstr th:eq(0)").height() > $("tr.colstr th:eq(1)").height()) {
+                $("tr.colstr th:eq(1)").height($("tr.colstr th:eq(0)").height());
+            } else if ($("tr.colstr th:eq(0)").height() < $("tr.colstr th:eq(1)").height()) {
+                $("tr.colstr th:eq(0)").height($("tr.colstr th:eq(1)").height());
+            }
+            //console.log($('.container').width());
+            if ($('.container').width() > 460) {
+                $("table tbody tr").each(function () {
+                    $(this).find("td:eq(1)").css("height", "");
+                    $(this).find("td:eq(3)").css("height", "");
+                })
+            } else {
+                window.setTimeout(function () {
+                    $("table tbody tr").each(function () {
+                        $(this).find("td:eq(1)").height($(this).find("td:eq(0)").height());
+                        $(this).find("td:eq(3)").height($(this).find("td:eq(2)").height());
+                    })
+                }, 100);
+            }
+
+        }
+
+        $(document).ready(function () {
+            var body_width = $("body").width();
+            var container_width = $('.container').width();
+            //ie加入logo
+            if (!-[1, ]) {
+                $(".main > div.hero > nav > div > a").hide();
+                $(".page-wrapper > main > div.hero").css("height", "100px");
+            }
+
+            //自適應H1大小
+            setH1Size();
+
+            //設定說明標籤高&文字置中
+            setRowChartKeyValuesMaxHeight();
+
+            //寬小於768px的手機 TABLE靠邊貼齊
+            setTableWidthInMiniPhone()
+
+            //設定語系位置
+            setTitleLangDiv();
+
+            $(window).resize(function () {
+                setH1Size();
+                if (controller == 'xrt') {
+                    //xrt/all頁面table 第一行 th 隱藏
+                    hideTableTh();
+                    //xrt/obuhx查詢畫面title等高判定
+                    setFormTitleHigh();
+                }
+
+                if (controller == 'cr') {
+                    //cr/手機版rwd表格高調整
+                    setTableTitleHigh();
+                }
+
+                if (controller == 'use') {
+                    //use/手機版rwd表格高調整
+                    setTableTitleHigh();
+                }
+
+                //設定說明標籤高&文字置中
+                setRowChartKeyValuesMaxHeight();
+
+                //寬小於768px的手機 TABLE靠邊貼齊
+                setTableWidthInMiniPhone();
+            });
+
+            //Trial
+            if (controller == 'trial') {
+                $("#lang_ddl").hide();
+                $(".TitleLang").hide();
+
+                $("input:radio").width("12px");
+                $("div.trailer > span.input-append > input:text").width("40px");
+                //JavaScript 鎖右鍵
+                document.oncontextmenu = new Function("return false");
+
+                $(".trailer").css("line-height", "45px");
+                $(".trailer").css("line-height", "0");
+            }
+
+            // 動態功能
+            if (controller == 'ir') {
+                // Bind
+                $('.footable').bind('footable_breakpoint', function (e) {
+                    // 展開所有表格內容
+                    $('.footable').trigger('footable_expand_all');
+                    // 依事件動態合併儲存格
+                    var breakpoint;
+                    if ($(this).hasClass('phone')) breakpoint = 'phone';
+                    else if ($(this).hasClass('tablet')) breakpoint = 'tablet';
+                    else breakpoint = 'default';
+
+                    if (breakpoint == 'phone') {
+                        $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                        $('.rowSP_Ctrl_3_6_6').attr('rowspan', '6');
+                        $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_0_0_2').attr('rowspan', '2');
+                        $('.set-title-L-min-width-class').css("min-width", parseInt($('.container').css("width")) / 5 + "px");
+                        $('.set-title-R-min-width-class').css("min-width", parseInt($('.container').css("width")) / 2 + "px");
+                    }
+                    else if (breakpoint == 'tablet') {
+                        $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                        $('.rowSP_Ctrl_3_6_6').attr('rowspan', '6');
+                        $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                        $('.set-title-L-min-width-class').css("min-width", parseInt($('.container').css("width")) / 5 + "px");
+                        $('.set-title-R-min-width-class').css("min-width", parseInt($('.container').css("width")) / 2 + "px");
+                    }
+                    else if (breakpoint == 'default') {
+                        $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_3_6_6').attr('rowspan', '3');
+
+                        //線條
+                        $(".footable-row-detail").hide();
+                    }
+
+                    // 停用 Row Toggle 功能
+                    $('.footable tr').off();
+                    $('.footable td').off();
+                    $('.title_sp').attr('rowspan', '2');
+                });
+                // Trigger Event
+                $('.footable').trigger('footable_breakpoint');
+
+                //去footable上面多的線&下面多的線
+                footableHideNodataBottom();
+
+                //小數尾去0
+                removeTableDoubleZero();
+            }
+            if (controller == 'gold') {
+            // Bind
+            $('.footable').bind('footable_breakpoint', function (e) {
+                $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                $(".rowSP_Ctrl_hidden").show();
+                // 展開所有表格內容
+                $(this).trigger('footable_expand_all');
+                // 依事件動態合併儲存格
+                var breakpoint;
+                if ($(this).hasClass('phone'))
+                    breakpoint = 'phone';
+                else if ($(this).hasClass('tablet'))
+                    breakpoint = 'tablet';
+                else breakpoint = 'default';
+                if (breakpoint == 'phone') {
+                    $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                    $('.rowSP_Ctrl_3_6_6').attr('rowspan', '6');
+                    $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                    $('.rowSP_Ctrl_0_0_2').attr('rowspan', '2');
+                }
+                else if (breakpoint == 'tablet') {
+                    $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                    $('.rowSP_Ctrl_3_6_6').attr('rowspan', '6');
+                    $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                    $('.rowSP_Ctrl_0_2_2').remove
+                }
+                else if (breakpoint == 'default') {
+                    $('.rowSP_Ctrl_2_4_4').attr('rowspan', '2');
+                    $('.rowSP_Ctrl_3_6_6').attr('rowspan', '3');
+                    //線條
+                    $(".footable-row-detail").hide();
+                }
+
+                // 停用 Row Toggle 功能
+                window.setTimeout(function () {
+                    footable_off();
+                }, 1000);
+
+                //去footable上面多的線&下面多的線
+                footableHideNodataBottom();
+
+                $(".rowSP_Ctrl_hidden").hide();
+                $('.title_sp').attr('rowspan', '2').attr('colspan', '2');
+
+                var all_width = $(".container").width();
+                if (all_width > 414) {
+                    $('.set-title-L').css("width", all_width * 0.4 + "px");
+                    $('.set-title-R').css("width", all_width * 0.6 + "px");
+                    $('.set-title-L-min-width-class').css("width", all_width * 0.2 + "px");
+                    $('.set-title-R-min-width-class').css("width", all_width * 0.2 + "px");
+                } else {
+                    $('.set-title-L').css("width", all_width * 0.3 + "px");
+                    $('.set-title-R').css("width", all_width * 0.7 + "px");
+                    $('.set-title-L-min-width-class').css("width", all_width * 0.15 + "px");
+                    $('.set-title-R-min-width-class').css("width", all_width * 0.15 + "px");
+                }
+
+                $('.set-title-L-min-width-class').css("min-width", "82px");
+                $('.set-title-R-min-width-class').css("min-width", "82px");
+            });
+            // Trigger Event
+            $('.footable').trigger('footable_breakpoint');
+
+            //resize時改變欄寬
+            $('.footable').bind('footable_resize', function (e) {
+                var all_width = $(".container").width();
+
+                if (all_width > 414) {
+                    $('.set-title-L').css("width", all_width * 0.4 + "px");
+                    $('.set-title-R').css("width", all_width * 0.6 + "px");
+                    $('.set-title-L-min-width-class').css("width", all_width * 0.2 + "px");
+                    $('.set-title-R-min-width-class').css("width", all_width * 0.2 + "px");
+                } else {
+                    $('.set-title-L').css("width", all_width * 0.3 + "px");
+                    $('.set-title-R').css("width", all_width * 0.7 + "px");
+                    $('.set-title-L-min-width-class').css("width", all_width * 0.15 + "px");
+                    $('.set-title-R-min-width-class').css("width", all_width * 0.15 + "px");
+                }
+
+                $('.set-title-L-min-width-class').css("min-width", "85px");
+                $('.set-title-R-min-width-class').css("min-width", "85px");
+
+                //去footable上面多的線&下面多的線
+                footableHideNodataBottom();
+            });
+        }
+            if (controller == 'twd') {
+                // Bind
+                $('.footable').bind('footable_breakpoint', function (e) {
+                    $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                    $(".rowSP_Ctrl_hidden").show();
+                    // 展開所有表格內容
+                    $('.footable').trigger('footable_expand_all');
+                    // 依事件動態合併儲存格
+                    var breakpoint;
+                    if ($(this).hasClass('phone')) breakpoint = 'phone';
+                    else if ($(this).hasClass('tablet')) breakpoint = 'tablet';
+                    else breakpoint = 'default';
+
+                    if (breakpoint == 'phone') {
+                        $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_6_12_12').attr('rowspan', '12');
+                        $('.rowSP_Ctrl_5_10_10').attr('rowspan', '10');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                        $('.rowSP_Ctrl_14_28_28').attr('rowspan', '28');
+                    }
+                    else if (breakpoint == 'tablet') {
+                        $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_6_12_12').attr('rowspan', '12');
+                        $('.rowSP_Ctrl_5_10_10').attr('rowspan', '10');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                        $('.rowSP_Ctrl_14_28_28').attr('rowspan', '28');
+                    }
+                    else if (breakpoint == 'default') {
+                        $('.rowSP_Ctrl_6_12_12').attr('rowspan', '6');
+                        $('.rowSP_Ctrl_5_10_10').attr('rowspan', '5');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_14_28_28').attr('rowspan', '14');
+
+                        //線條
+                        $(".footable-row-detail").hide();
+                    }
+
+                    if (getBreakPointType_5types(container_width) == "phone") {
+                        if ("zh-TW" != "en-US") {
+                            $('.set-title-L-min-width-class').css("width", "48px");
+                        }
+                        else {
+                            $('.set-title-L-min-width-class').css("width", "90px");
+                        }
+                    } else if (getBreakPointType_5types(container_width) == 'tablet') {
+                        $('.set-title-L-min-width-class').css("max-width", "200px");
+                        $('.set-title-L-min-width-class').css("min-width", "100px");
+                    } else {
+                        $('.set-title-L-min-width-class').css("max-width", "200px");
+                        $('.set-title-L-min-width-class').css("min-width", "110px");
+                    }
+
+                    //去footable上面多的線&下面多的線
+                    footableHideNodataBottom();
+
+                    // 停用 Row Toggle 功能
+                    window.setTimeout(function () {
+                        footable_off();
+                    }, 1000);
+                    $('.title_sp').attr('rowspan', '2');
+                    $(".rowSP_Ctrl_hidden").hide();
+                });
+
+                // Trigger Event
+                $('.footable').trigger('footable_breakpoint');
+
+                //resize時改變欄寬
+                $('.footable').bind('footable_resize', function (e) {
+                    $('.set-title-L-min-width-class').css("width", "");
+                    $('.set-title-L-min-width-class').css("max-width", "");
+                    $('.set-title-L-min-width-class').css("min-width", "");
+
+                    if (getBreakPointType_5types(container_width) == "phone") {
+                        if ("zh-TW" != "en-US") {
+                            $('.set-title-L-min-width-class').css("width", "48px");
+                        }
+                        else {
+                            $('.set-title-L-min-width-class').css("width", "90px");
+                        }
+                    } else if (getBreakPointType_5types(container_width) == 'tablet') {
+                        $('.set-title-L-min-width-class').css("max-width", "200px");
+                        $('.set-title-L-min-width-class').css("min-width", "100px");
+                    } else {
+                        $('.set-title-L-min-width-class').css("max-width", "200px");
+                        $('.set-title-L-min-width-class').css("min-width", "110px");
+                    }
+
+                    //去footable上面多的線&下面多的線
+                    footableHideNodataBottom();
+                });
+
+
+            }
+            if (controller == 'xrt') {
+                $('.footable').bind('footable_breakpoint', function (e) {
+                    // 展開所有表格內容
+                    $(this).trigger('footable_expand_all');
+                    // 依事件動態合併儲存格
+                    var breakpoint;
+                    if ($(this).hasClass('phone'))
+                        breakpoint = 'phone';
+                    else if ($(this).hasClass('tablet'))
+                        breakpoint = 'tablet';
+                    else breakpoint = 'default';
+                    if (breakpoint == 'phone') {
+                        $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                        $('.rowSP_Ctrl_3_6_6').attr('rowspan', '6');
+                        $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_0_0_2').attr('rowspan', '2');
+                    }
+                    else if (breakpoint == 'tablet') {
+                        $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '4');
+                        $('.rowSP_Ctrl_3_6_6').attr('rowspan', '6');
+                        $('.rowSP_Ctrl_0_2_2').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_0_2_2').remove
+                    }
+                    else if (breakpoint == 'default') {
+                        $("td[class^='rowSP_Ctrl_']").removeAttr('rowspan');
+                        $('.rowSP_Ctrl_2_4_4').attr('rowspan', '2');
+                        $('.rowSP_Ctrl_3_6_6').attr('rowspan', '3');
+
+                        //線條
+                        $(".footable-row-detail").hide();
+                    }
+
+                    // 停用 Row Toggle 功能
+                    window.setTimeout(function () {
+                        footable_off();
+                    }, 1000);
+                });
+
+                $('.rowSP_Ctrl_2_2_2').attr('rowspan', '2');
+
+                // Trigger Event
+                $('.footable').trigger('footable_breakpoint');
+
+                var all_width = $(".container").width();
+                if (all_width < 720) {
+                    //$("thead > tr > th").first().css("background-color", "black");
+                    $("thead > tr > th").css("width", all_width * 0.2 + "px");
+                }
+                hideTableTh();
+
+                //xrt/obuhx查詢畫面title等高判定
+                setFormTitleHigh();
+
+                //小數尾去0
+                removeTableDoubleZero();
+            }
+
+            if (controller=='home') {
+                $('.footable').trigger('footable_expand_all');
+            }
+
+            if (controller == 'cr') {
+                //cr/手機版rwd表格高調整
+                setTableTitleHigh();
+            }
+
+            if (controller == 'use') {
+                //use/手機版rwd表格高調整
+                setTableTitleHigh();
+            }
+
+            $('.footable').footable({
+                addRowToggle: false
+            });
+            flag = false;
+
+            // 查詢功能
+            // 單一幣別歷史匯率查詢
+            $("#single").on("click", function (e) {
+                var action = 'chart';
+                var url = action == 'history' ? '/xrt/quote' : '/xrt/obuquote';
+                var range = $('input[name="search_range"]:checked').val();
+                //查詢範圍限前一年度起至最近營業日
+                if (range == 'month') {
+                    var Today = new Date();
+                    if ($('select[name=year]').val() > Today.getFullYear() || ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") > parseInt(Today.getMonth()) + 1)) {
+                        if ("".toLowerCase() == "true") {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("The range of specified year-month must be within last 3 year.");
+                                    break;
+                                case "zh-TW":
+                                    alert("指定年月有效範圍為最近三年之內。");
+                                    break;
+                                case "zh-CN":
+                                    alert("指定年月有效范围为最近三年之内。");
+                                    break;
+                            }
+                        } else {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("Inquiry Period starts from previous year to the last business day.");
+                                    break;
+                                case "zh-TW":
+                                    alert("查詢範圍限前一年度起至最近營業日。");
+                                    break;
+                                case "zh-CN":
+                                    alert("查询范围限前一年度起至最近营业日。");
+                                    break;
+                            }
+                        }
+                        return false;
+                    }
+                }
+
+                var cur = $('select[name=currency]').val();
+                var hours = $('input[name="search_hours"]:checked').val();
+                var type = $('input[name="rate_type"]:checked').val();
+                if ($('input[name=obu]').val() == 1) type = "spot";
+                var compare = $('select[name=compare]').is(':enabled') ? $('select[name=compare]').val() : "";
+                // 查詢期間
+                if (range == 'day' || range == 'ltm' || range == 'l6m' || range == 'l1y' || range == 'l3y') url += ("/" + range);
+                if (range == 'month') url += ("/" + $('select[name=year]').val() + "-" + $('select[name=month]').val());
+                // 查詢幣別
+                url += '/' + (cur ? cur : 'USD');
+                url += compare ? "-" + compare : "";
+                if (hours == '1') {
+                    url += '/' + type + '/1';
+                } else {
+                    if (type == 'cash') url += '/cash';
+                }
+                $(this).attr('href', url);
+            });
+
+            // 全部幣別歷史匯率查詢
+            $("#all").on("click", function (e) {
+                var url = '/xrt/all';
+                var range = $('input[name="all_range"]:checked').val();
+                var day = $('select[name=all_day]').val();
+                // 查詢期間
+                if (range == 'day') url += ("/" + range);
+                //查詢範圍限前一年度起至最近營業日
+                if (range == 'date') {
+                    if (!CheckDate($('select[name=all_year]').val() + "/" + $('select[name=all_month]').val().replace(/\b(0+)/gi, "") + "/" + $('select[name=all_day]').val().replace(/\b(0+)/gi, ""))) {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The historical data is not valid.");
+                                break;
+                            case "zh-TW":
+                                alert("您輸入的歷史資料日期不是一個有效值。");
+                                break;
+                            case "zh-CN":
+                                alert("您输入的历史数据日期不是一个有效值。");
+                                break;
+                        }
+                        return false;
+                    }
+                    var Today = new Date();
+                    if ($('select[name=all_year]').val() > Today.getFullYear() ||
+                        ($('select[name=all_year]').val() >= Today.getFullYear() && $('select[name=all_month]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getMonth()) + 1)) ||
+                        ($('select[name=all_year]').val() >= Today.getFullYear() && $('select[name=all_month]').val().replace(/\b(0+)/gi, "") >= (parseInt(Today.getMonth()) + 1) && $('select[name=all_day]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getDate()))) ||
+                        $('select[name=all_year]').val() < Today.getFullYear() - 3 ||
+                        ($('select[name=all_year]').val() <= Today.getFullYear() - 3 && $('select[name=all_month]').val().replace(/\b(0+)/gi, "") < (parseInt(Today.getMonth()) + 1)) ||
+                        ($('select[name=all_year]').val() <= Today.getFullYear() - 3 && $('select[name=all_month]').val().replace(/\b(0+)/gi, "") <= (parseInt(Today.getMonth()) + 1) && $('select[name=all_day]').val().replace(/\b(0+)/gi, "") < (parseInt(Today.getDate())))) {
+                        if ("".toLowerCase() == "true") {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("The range of specified year-month must be within last 3 year.");
+                                    break;
+                                case "zh-TW":
+                                    alert("指定日期有效範圍為最近三年之內。");
+                                    break;
+                                case "zh-CN":
+                                    alert("指定日期有效范围为最近三年之内。");
+                                    break;
+                            }
+                        } else {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("Inquiry period starts from previous year to the last business day which Closing Rate had been produced.");
+                                    break;
+                                case "zh-TW":
+                                    alert("查詢範圍限前一年度起至最近一個已產生收盤價之營業日。");
+                                    break;
+                                case "zh-CN":
+                                    alert("查询范围限前一年度起至最近一个已产生收盘价之营业日。");
+                                    break;
+                            }
+                        }
+                        return false;
+                    }
+                }
+
+                if (range == 'date') url += ("/" + $('select[name=all_year]').val() + "-" + $('select[name=all_month]').val() + "-" + day);
+                if ($('input[name=obu]').val() == 1) url += '/1';
+
+                $(this).attr('href', url);
+            });
+            $("#systemdate").change(function (e) {
+                var r = /^-[0-9]*[1-9][0-9]*$/;
+                if (r.test(getUrlVars()["backtimes"])) {
+                    backtimes = parseInt(getUrlVars()["backtimes"]) - 1;
+                } else {
+                    backtimes = -1;
+                }
+                self.location.href = '//' + location.host + location.pathname + "?sysdate=" + $('select[name=sysdate]').val() + "&backtimes=" + (backtimes);
+            });
+
+            //最近一個營業日不可比較幣別，比較幣別為空時不顯示現金&即期
+            $('input:radio[name="search_range"]').change(function () {
+                //最近一個營業日不可比較幣別，比較幣別為空時不顯示現金&即期
+                search_range_check($('input:radio:checked[name="search_range"]'));
+            });
+
+            if ($("#ltm").is(":checked") || $("#month").is(":checked"))
+                $('select[name=compare]').prop('disabled', false);
+
+            // 匯率種類控制
+            $('select[name=compare]').change(function () {
+                if ($(this).val()) {
+                    $('#datatype').show();
+                } else {
+                    $('#datatype').hide();
+                }
+            });
+            if ($('select[name=compare]').val()) { $('#datatype').show(); } else { $('#datatype').hide(); }
+
+            // 外幣結帳價格表查詢
+            $("#cr").on("click", function (e) {
+                var Today = new Date();
+                if ($('select[name=year]').val() > Today.getFullYear() ||
+                    ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getMonth()) + 1))) {
+                    if (controller == 'ir') {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The historical data must be less than or equal to today.");
+                                break;
+                            case "zh-TW":
+                                alert("歷史資料日期不可大於今天。");
+                                break;
+                            case "zh-CN":
+                                alert("历史资料日期不可大于今天。");
+                                break;
+                        }
+                    }
+                    else {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The selected query date is not date of history data, please select it again");
+                                break;
+                            case "zh-TW":
+                                alert("你輸入之查詢日期非為歷史資料日期");
+                                break;
+                            case "zh-CN":
+                                alert("您输入之查询日期非为历史数据日期");
+                                break;
+                        }
+                    }
+                    return;
+                }
+
+                var url = '/cr';
+                url += ("/" + $('select[name=year]').val() + "-" + $('select[name=month]').val());
+                $(this).attr('href', url);
+            });
+
+            // 歷史外匯存款牌告利率查詢 / 新臺幣存(放)款牌告利率查詢
+            $("#ir").on("click", function (e) {
+                //檢查輸入的日期是否是一個正確的日期格式
+                if ($('select[name=day]').val() != "") {
+                    if (!CheckDate($('select[name=year]').val() + "/" + $('select[name=month]').val().replace(/\b(0+)/gi, "") + "/" + $('select[name=day]').val().replace(/\b(0+)/gi, ""))) {
+                        if (controller == 'ir') {
+
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("The historical data is not valid.");
+                                    break;
+                                case "zh-TW":
+                                    alert("您輸入的歷史資料日期不是一個有效值。");
+                                    break;
+                                case "zh-CN":
+                                    alert("您输入的历史数据日期不是一个有效值。");
+                                    break;
+                            }
+                        }
+                        else {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("History data query input error");
+                                    break;
+                                case "zh-TW":
+                                    alert("歷史資料查詢輸入錯誤。");
+                                    break;
+                                case "zh-CN":
+                                    alert("历史数据查询输入错误。");
+                                    break;
+                            }
+                        }
+                        return;
+                    }
+                }
+                //查詢範圍限前一年度起至最近營業日
+                var Today = new Date();
+                if ($('select[name=year]').val() > Today.getFullYear() ||
+                    ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getMonth()) + 1)) ||
+                    ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") >= (parseInt(Today.getMonth()) + 1) && $('select[name=day]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getDate())))) {
+                    if (controller == 'ir') {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The historical data must be less than or equal to today.");
+                                break;
+                            case "zh-TW":
+                                alert("歷史資料日期不可大於今天。");
+                                break;
+                            case "zh-CN":
+                                alert("历史资料日期不可大于今天。");
+                                break;
+                        }
+                    }
+                    else {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The selected query date is not date of history data, please select it again");
+                                break;
+                            case "zh-TW":
+                                alert("你輸入之查詢日期非為歷史資料日期");
+                                break;
+                            case "zh-CN":
+                                alert("您输入之查询日期非为历史数据日期");
+                                break;
+                        }
+                    }
+                    return;
+                } else if (controller == "twd") {
+                    //twd在1998-7-7前沒有值
+                    if ($('select[name=year]').val() < 1988 ||
+                    ($('select[name=year]').val() <= 1988 && $('select[name=month]').val().replace(/\b(0+)/gi, "") < (7)) ||
+                        ($('select[name=year]').val() <= 1988 && $('select[name=month]').val().replace(/\b(0+)/gi, "") <= (7) && $('select[name=day]').val().replace(/\b(0+)/gi, "") < (7))) {
+                        alert("無此歷史資料日期牌告利率可供查詢");
+                        return;
+                    }
+                }
+                var action = 'chart';
+                //var url = controller == 'ir' ? '/ir/history' : '/twd';
+                var url = "";
+                if (controller == 'ir') {
+                    //url = '/ir/history';
+                    url = action == 'history' ? '/ir/history' : '/ir/obuhx';
+                } else {
+                    url = '/twd';
+                }
+                url += ("/" + $('select[name=year]').val() + "-" + $('select[name=month]').val() + "-" + $('select[name=day]').val());
+                $(this).attr('href', url);
+            });
+
+            // 歷史黃金牌價查詢
+            $("#gold").on("click", function (e) {
+                var range = $('input[name="search_range"]:checked').val();
+                //查詢範圍限前一年度起至最近營業日
+                if (range == 'date') {
+                    var Today = new Date();
+                    if (!CheckDate($('select[name=year]').val() + "/" + $('select[name=month]').val().replace(/\b(0+)/gi, "") + "/" + $('select[name=day]').val().replace(/\b(0+)/gi, ""))) {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The specified date is not valid.");
+                                break;
+                            case "zh-TW":
+                                alert("指定日期是一個無效值。");
+                                break;
+                            case "zh-CN":
+                                alert("指定日期是一个无效值。");
+                                break;
+                        }
+                        return;
+                    }
+                    if ($('select[name=year]').val() > Today.getFullYear() ||
+                    ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getMonth()) + 1)) ||
+                    ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") >= (parseInt(Today.getMonth()) + 1) && $('select[name=day]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getDate())))) {
+                        switch ("zh-TW") {
+                            case "en-US":
+                                alert("The historical data is not valid.");
+                                break;
+                            case "zh-TW":
+                                alert("您輸入的歷史資料日期不是一個有效值。");
+                                break;
+                            case "zh-CN":
+                                alert("您输入的历史数据日期不是一个有效值。");
+                                break;
+                        }
+                        return;
+                    }
+                }
+                var url = '/gold/quote';
+                // 查詢期間
+                if (range == 'recent' || range == 'preceding') url += ("/" + range);
+                if (range == 'date') url += ("/" + $('select[name=year]').val() + "-" + $('select[name=month]').val() + "-" + $('select[name=day]').val());
+                $(this).attr('href', url);
+            });
+            // 歷史黃金存摺牌價查詢
+            $("#passbook").on("click", function (e) {
+                // 基本變數
+                var url = '/gold/chart';
+                var range = $('input[name="search_range"]:checked').val();
+                var cur = $('select[name=currency]').val();
+                var hours = $('input[name="search_hours"]:checked').val();
+                //查詢範圍限前一年度起至最近營業日
+                var Today = new Date();
+                if ($('select[name=year]').val() > Today.getFullYear() ||
+                    ($('select[name=year]').val() >= Today.getFullYear() && $('select[name=month]').val().replace(/\b(0+)/gi, "") > (parseInt(Today.getMonth()) + 1))) {
+                    if (range == "date") {
+                        if ("".toLowerCase() == "true") {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("The range of specified year-month must be within last 3 year.");
+                                    break;
+                                case "zh-TW":
+                                    alert("指定年月有效範圍為最近三年之內。");
+                                    break;
+                                case "zh-CN":
+                                    alert("指定年月有效范围为最近三年之内。");
+                                    break;
+                            }
+                        } else {
+                            switch ("zh-TW") {
+                                case "en-US":
+                                    alert("The range of specified year-month must be within last 1 year.");
+                                    break;
+                                case "zh-TW":
+                                    alert("指定年月有效範圍為最近一年之內。");
+                                    break;
+                                case "zh-CN":
+                                    alert("指定年月有效范围为最近一年之内。");
+                                    break;
+                            }
+                        }
+                        return;
+                    }
+                }
+
+                // 查詢期間
+                if (range == 'day' || range == 'ltm' || range == 'half' || range == 'year' || range == 'l3y') url += ("/" + range);
+                if (range == 'date') url += ("/" + $('select[name=year]').val() + "-" + $('select[name=month]').val());
+                // 查詢幣別
+                url += '/' + (cur ? cur : 'USD');
+                // 查詢項目
+                if (hours == '1') {
+                    url += '/1';
+                }
+                $(this).attr('href', url);
+            });
+            $("#bias").on("click", function (e) {
+                var url = '/bias/chart';
+                var range = $('input[name="date"]:checked').val();
+                $(this).attr('href', url + "/" + range);
+            });
+
+            //RWD加入千分位
+            tableAddCommafy();
+
+            $(".footable-row-detail-value").each(function () {
+                var td = $(this).text();
+                if (!isNaN(td)) {
+                    if (td.split(".").length == 1) {
+                        $(this).text(commafy(td));
+                    } else if (td.split(".").length == 2) {
+                        //小數部份不用加千分位
+                        $(this).text(commafy(td.split(".")[0]) + "." + td.split(".")[1]);
+                    }
+                }
+            })
+
+            //多語系下拉顯示文字(依現行語系顯示)
+            //電腦版下拉
+            $('#lang_ddl')
+                .find('option')
+                .filter(function () {
+                    return this.value == "zh-TW";
+                })
+                .prop('selected', true);
+
+            //手機版下拉
+            switch ("zh-TW") {
+                case "en-US":
+                    $("#lang_ddl_phone").html("En");
+                    break;
+                case "zh-TW":
+                    $("#lang_ddl_phone").html("中");
+                    break;
+                case "zh-CN":
+                    $("#lang_ddl_phone").html("简");
+                    break;
+            }
+
+            //電腦版多語系
+            $("#lang_ddl").change(function () {
+                ChangeLanguage($(this).val());
+            })
+
+            //手機版多語系
+            $(".lang_ddl_css").click(function () {
+                ChangeLanguage($(this).attr("value"));
+            })
+
+            $(".click_print").on("click", function (e) {
+                if (!-[1, ]) {
+                    //IE8
+                    //wb.execwb(7, 1);
+                    if (location.search == "") {
+                        window.open(location.pathname + "?page=print", 'Print');
+                    } else {
+                        window.open(location.pathname + "?page=print&" + location.search.replace("?", ""), 'Print');
+                    }
+                }
+                else {
+                    if (detectBrowser() == "IE") {
+                        //IE9~11
+                        //wb.execwb(7, 1);
+                        if (location.search == "") {
+                            window.open(location.pathname + "?page=print", 'Print');
+                        } else {
+                            window.open(location.pathname + "?page=print&" + location.search.replace("?", ""), 'Print');
+                        }
+                    }
+                    else if (detectBrowser() == "Firefox") {
+                        //Firefox
+                        //window.print();
+                        if (location.search == "") {
+                            window.open(location.pathname + "?page=print", 'Print');
+                        } else {
+                            window.open(location.pathname + "?page=print&" + location.search.replace("?", ""), 'Print');
+                        }
+                    }
+                    else {
+                        window.print();
+                    }
+                }
+            });
+            $(".doPrintBtn").on("click", function () {
+                window.print();
+            })
+            $(".doCloseBtn").on("click", function () {
+                window.close();
+            })
+
+            //判斷列印頁 & 加上列印style
+            var location_search = location.search;
+            if (location_search.split("page=print").length > 1) {
+                setPrintStyle();
+            }
+
+            var backtimes = -1;
+            //自定上一頁
+            $(".click_back").on("click", function (e) {
+                var r = /^-[0-9]*[1-9][0-9]*$/;
+                if (r.test(getUrlVars()["backtimes"])) {
+                    backtimes = parseInt(getUrlVars()["backtimes"]) - 1;
+                } else {
+                    backtimes = -1;
+                }
+                window.history.go(backtimes);
+                return false;
+            });
+
+            $(".click_back_times").on("click", function (e) {
+            });
+
+            $(".click_close").on("click", function (e) {
+                window.close();
+            });
+
+            //class多語系顯示控制
+            $(".zh-TW_show").hide();
+            switch ("zh-TW") {
+                case "en-US":
+                    //$(".zh-TW_show").css("display", "none !important");
+                    $(".zh-TW_show").hide();
+                    //$(".zh-CN_show").css("display", "none !important");
+                    $(".zh-CN_show").hide();
+                    $(".en-US_show").show();
+                    break;
+                case "zh-TW":
+                    //$(".zh-CN_show").css("display", "none !important");
+                    $(".zh-CN_show").hide();
+                    //$(".zh-US_show").css("display", "none !important");
+                    $(".en-US_show").hide();
+                    $(".zh-TW_show").show();
+                    break;
+                case "zh-CN":
+                    //$(".zh-TW_show").css("display", "none !important");
+                    $(".zh-TW_show").hide();
+                    //$(".zh-US_show").css("display", "none !important");
+                    $(".en-US_show").hide();
+                    $(".zh-CN_show").show();
+                    break;
+            }
+
+            //比較幣別 防呆xrt/history xrt/obuhx 不可比較自己
+            onCurrencySelectChange();
+
+            //補history查詢lable改div後點文字無法自動選擇
+            //單一幣別
+            $(".click_select_month").click(function () {
+                $("#month").prop("checked", true);
+                //最近一個營業日不可比較幣別，比較幣別為空時不顯示現金&即期
+                search_range_check($('input:radio:checked[name="search_range"]'));
+            })
+            //比較幣別
+            $(".click_select_date").click(function () {
+                $("#input_date").prop("checked", true);
+            })
+
+            //右上角切換語言鍵，改為點選開關
+            $("#lang_ddl_phone").click(function () {
+                //alert($(".dropdown-content").css("display"));
+                if ($(".dropdown-content").css("display") == "none") {
+                    $(".dropdown-content").show();
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "#8a0050");
+                } else {
+                    $(".dropdown-content").hide();
+                    $(this).css("background-color", "black");
+                    $(this).css("color", "white");
+                }
+            })
+
+            //footable 展開所有表格內容
+            $(".click_ExpandAll").click(function () {
+                $('.footable').trigger('footable_expand_all');
+            })
+
+            //footable 關閉所有表格內容
+            $(".click_CollapseAll").click(function () {
+                $('.footable').trigger('footable_collapse_all');
+            })
+
+            //取得最新xx
+            $(".click_reload").on("click", function (e) {
+                location.reload();
+            });
+        });
+
+        $(window).load(function () {
+            //最近一個營業日不可比較幣別，比較幣別為空時不顯示現金&即期(for chrome)
+            search_range_check($('input:radio:checked[name="search_range"]'));
+            //alert("load");
+        })
+    </script>
+</body>
+</html>
