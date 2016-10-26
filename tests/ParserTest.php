@@ -12,11 +12,12 @@ class ParserTest extends PHPUnit_Framework_TestCase
 
     public function test_to_array()
     {
+        $html = file_get_contents(__DIR__.'/gold.html');
         $gold = m::mock('Recca0120\TaiwanBank\Gold');
 
-        $gold->shouldReceive('getHtml')->andReturn('foo');
+        $gold->shouldReceive('getHtml')->andReturn($html);
 
         $parser = new Parser($gold);
-        $this->assertSame('foo', $parser->toArray());
+        $this->assertSame($html, $parser->toArray());
     }
 }
