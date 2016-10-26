@@ -1,6 +1,7 @@
 <?php
 
 use Recca0120\TaiwanBank\Gold;
+use Recca0120\TaiwanBank\Parser;
 use Http\Adapter\Guzzle6\Client;
 use Http\Message\MessageFactory\GuzzleMessageFactory;
 
@@ -10,4 +11,8 @@ $client = new Client();
 $messageFactory = new GuzzleMessageFactory();
 
 $gold = new Gold($client, $messageFactory);
-echo $gold->getHtml();
+$parser = new Parser($gold);
+
+header('content-type: application/json');
+
+echo json_encode($parser->toArray());
