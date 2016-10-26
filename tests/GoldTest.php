@@ -32,6 +32,7 @@ class GoldTest extends PHPUnit_Framework_TestCase
 
         $gold = new Gold($httpClient, $messageFactory);
         $html = $gold->getHtml();
-        
+
+        $this->assertSame('fooHtml', $html);
     }
 }

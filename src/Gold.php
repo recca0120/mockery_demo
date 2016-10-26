@@ -17,7 +17,7 @@ class Gold {
         // 送出Request回傳 Psr\Http\Message\ResponseInterface，並得到第二個綠燈
         $response = $this->httpClient->sendRequest($request);
 
-        // 直接取得html，並得到第三個紅燈
+        // 直接取得html，並得到第三個綠燈
         return $response->getBody()->getContents();
     }
 }
