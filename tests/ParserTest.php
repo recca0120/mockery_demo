@@ -18,6 +18,6 @@ class ParserTest extends PHPUnit_Framework_TestCase
         $gold->shouldReceive('getHtml')->andReturn($html);
 
         $parser = new Parser($gold);
-        var_dump($parser->toArray());
+        file_put_contents(__DIR__.'/gold.json', json_encode($parser->toArray()));
     }
 }
