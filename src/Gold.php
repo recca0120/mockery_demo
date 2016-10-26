@@ -14,7 +14,10 @@ class Gold {
     public function getHtml() {
         // 建立 Psr\Http\Message\RequestInterface，並得到綠燈
         $request = $this->messageFactory->createRequest('GET', 'http://rate.bot.com.tw/gold/chart/year/TWD');
-        // 送出Request回傳 Psr\Http\Message\ResponseInterface，並得到第二個紅燈
+        // 送出Request回傳 Psr\Http\Message\ResponseInterface，並得到第二個綠燈
         $response = $this->httpClient->sendRequest($request);
+
+        // 直接取得html，並得到第三個紅燈
+        return $response->getBody()->getContents();
     }
 }
