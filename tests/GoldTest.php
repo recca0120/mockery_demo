@@ -16,7 +16,9 @@ class GoldTest extends PHPUnit_Framework_TestCase
         $request = m::mock('Psr\Http\Message\RequestInterface');
 
         $messageFactory
-            ->shouldReceive('createRequest')->with('GET', 'http://rate.bot.com.tw/gold/chart/year/TWD');
+            ->shouldReceive('createRequest')
+            ->with('GET', 'http://rate.bot.com.tw/gold/chart/year/TWD')
+            ->andReturn($request);
 
         $gold = new Gold($httpClient, $messageFactory);
         $html = $gold->getHtml();
