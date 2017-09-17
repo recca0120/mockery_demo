@@ -6,13 +6,31 @@
 ```php
 use PHPUnit\Framework\TestCase;
 
-class AssertionsTest extends TestCase {
+class AssertionsTest extends TestCase 
+{
 
     public function test_assert_true() 
     {
         $actual = false;
 
         $this->assertTrue($actual);
+    }
+}
+```
+
+### assertFalse
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+
+    public function test_assert_false() 
+    {
+        $actual = false;
+
+        $this->assertFalse($actual);
     }
 }
 ```

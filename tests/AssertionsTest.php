@@ -10,4 +10,12 @@ class AssertionsTest extends TestCase
 
         $this->assertTrue($actual);
     }
+    
+
+    public function test_assert_false()
+    {   
+        $actual = false;
+
+        $this->assertFalse($actual);
+    }
 }
