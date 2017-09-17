@@ -9,6 +9,8 @@ use Mockery as m;
 
 class GoldHistoryTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function test_index()
     {
         $client = m::mock(new Client);
@@ -39,6 +41,30 @@ class GoldHistoryTest extends TestCase
             'unit' => '1公克',
             'buy' => '1276',
             'sell' => '1292'
+        ]);
+
+        $this->assertDatabaseHas('gold_histories', [
+            'date' => '2017/09/14',
+            'currency' => '新台幣 (TWD)',
+            'unit' => '1公克',
+            'buy' => '1269',
+            'sell' => '1285'
+        ]);
+
+        $this->assertDatabaseHas('gold_histories', [
+            'date' => '2017/09/13',
+            'currency' => '新台幣 (TWD)',
+            'unit' => '1公克',
+            'buy' => '1276',
+            'sell' => '1292'
+        ]);
+
+        $this->assertDatabaseHas('gold_histories', [
+            'date' => '2017/09/15',
+            'currency' => '新台幣 (TWD)',
+            'unit' => '1公克',
+            'buy' => '1272',
+            'sell' => '1288'
         ]);
     }
 }
