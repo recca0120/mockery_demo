@@ -102,7 +102,6 @@ class AssertionsTest extends TestCase
 }
 ```
 
-
 ### assertCount
 
 ```php
@@ -117,4 +116,17 @@ class AssertionsTest extends TestCase
 }
 ```
 
+### assertArrayHasKey
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_array_has_key() 
+    {
+        $this->assertArrayHasKey('bar', ['bar' => 'baz']);
+    }
+}
+```
     

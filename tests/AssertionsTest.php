@@ -70,4 +70,9 @@ class AssertionsTest extends TestCase
     {
         $this->assertCount(5, [1, 3, 5, 7, 9]);
     }
+
+    public function test_assert_array_has_key() 
+    {
+        $this->assertArrayHasKey('bar', ['bar' => 'baz']);
+    }
 }
