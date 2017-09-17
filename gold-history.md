@@ -43,3 +43,4 @@ composer require mockery/mockery --dev
     - 完成 parseTbody 並準備第二個測試
     - 完成 parseRows 並準備第三個測試
     - 完成 parseCols
+- 將 Parser 注入到 GoldHistory，並調整測試案例

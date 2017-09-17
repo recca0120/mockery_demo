@@ -4,8 +4,9 @@ namespace Acme;
 
 class GoldHistory
 {
-    public function __construct(Client $client) {
+    public function __construct(Client $client, Parser $parser) {
         $this->client = $client;
+        $this->parser = $parser;
     }
 
     public function get() 
