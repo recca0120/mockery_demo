@@ -81,3 +81,29 @@ class MockeryTest extends TestCase
     }
 } 
 ```
+
+### Stub Test 並測試傳入參數及呼叫次數
+
+```php
+namespace Acme\Tests;
+
+use Acme\Client;
+use Mockery as m;
+use PHPUnit\Framework\TestCase;
+
+class MockeryTest extends TestCase
+{
+    public function test_stub_with_times_and_arguments() 
+    {
+        $client = m::mock(new Client);
+        $client->shouldReceive('get')->once()->with('a', 'b')->andReturn(file_get_contents(__DIR__.'/gold-history.html'));
+ 
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get('a', 'b'));
+
+        $client->shouldReceive('get')->times(3)->with('c', 'd')->andReturn(file_get_contents(__DIR__.'/gold-history.html'));
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get('a', 'b'));
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get('a', 'b'));
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get('a', 'b'));
+    }
+} 
+```
