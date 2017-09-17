@@ -27,9 +27,9 @@ class ParserTest extends TestCase
     public function test_parse_rows($tbody) 
     {
         $parser = new Parser;
-        
+         
         $rows = $parser->parseRows($tbody);
-
+ 
         foreach ($rows as $row) {
             $this->assertContains('<tr>', $row);
             $this->assertContains('</tr>', $row);

@@ -13,6 +13,8 @@ class Parser
 
     public function parseRows($tbody)
     {
-        
+        preg_match_all('/<tr>.*<\/tr>/ismU', $tbody, $matches);
+
+        return $matches[0];
     }
 }
