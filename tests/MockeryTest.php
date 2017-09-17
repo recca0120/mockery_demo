@@ -43,6 +43,14 @@ class MockeryTest extends TestCase
         $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get('a', 'b'));
         $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get('a', 'b'));
     }
+
+    public function test_mock() 
+    {
+        $client = m::mock(Client::class);
+        $client->shouldReceive('get')->andReturn(file_get_contents(__DIR__.'/gold-history.html'));
+ 
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get());
+    }
 } 
  
 class FakeClient extends Client 

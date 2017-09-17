@@ -107,3 +107,30 @@ class MockeryTest extends TestCase
     }
 } 
 ```
+
+### Mock Test
+
+```php
+namespace Acme\Tests;
+
+use Acme\Client;
+use Mockery as m;
+use PHPUnit\Framework\TestCase;
+
+class MockeryTest extends TestCase
+{
+    public function test_mock() 
+    {
+        $client = m::mock(Client::class);
+        $client->shouldReceive('get')->andReturn(file_get_contents(__DIR__.'/gold-history.html'));
+ 
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get());
+    }
+} 
+```
+
+mock 和 stub 看起來十分相似，但有很大的不同
+一般情況之下都應該使用 stub，  
+但如果要使用的物件有太多的相依性  
+就可以選擇使用 mock 的方式來進行撰寫
+就不需要去 new 該物件相依的物件
