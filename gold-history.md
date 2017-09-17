@@ -48,3 +48,4 @@ composer require mockery/mockery --dev
 - 重構GoldHistory，讓可閱讀性提高
 - 炫技的重構
 - 新增 index.php 看看結果是否正確
+- 注入太麻煩，那就給用預設值
