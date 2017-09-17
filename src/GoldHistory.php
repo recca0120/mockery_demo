@@ -15,7 +15,16 @@ class GoldHistory
             ]
         ]);
         
-        $html = file_get_contents($url, false, $context);
+        $htmlFile = __DIR__.'/../gold-history.html';
+        if (file_exists($htmlFile) === false) {
+            file_put_contents(
+                $htmlFile,
+                file_get_contents($url, false, $context)
+            );
+        }
+
+        $html = file_get_contents($htmlFile);
+        
 
         return $html;
     }
