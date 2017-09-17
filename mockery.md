@@ -39,3 +39,24 @@ class FakeClient extends Client
     }
 }
 ```
+
+### Stub Test
+
+```php
+namespace Acme\Tests;
+
+use Acme\Client;
+use Mockery as m;
+use PHPUnit\Framework\TestCase;
+
+class MockeryTest extends TestCase
+{
+    public function test_stub() 
+    {
+        $client = m::mock(new Client);
+        $client->shouldReceive('get')->andReturn(file_get_contents(__DIR__.'/gold-history.html'));
+ 
+        $this->assertSame(file_get_contents(__DIR__.'/gold-history.html'), $client->get());
+    }
+} 
+```
