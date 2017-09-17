@@ -6,4 +6,4 @@ use Acme\GoldHistory;
 
 $goldHistory = new GoldHistory();
 
-var_dump($goldHistory);
+var_dump($goldHistory->get());
