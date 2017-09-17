@@ -175,3 +175,20 @@ class AssertionsTest extends TestCase
     }
 }
 ```
+
+### assertJsonStringEqualsJsonString
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_json_string_equals_json_string()
+    {
+        $this->assertJsonStringEqualsJsonString(
+            json_encode(['Mascot' => 'Tux']),
+            json_encode(['Mascot' => 'Tux'])
+        );
+    }
+}
+```
