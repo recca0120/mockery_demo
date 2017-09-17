@@ -14,16 +14,8 @@ class GoldHistory
                 ])
             ]
         ]);
-        
-        $htmlFile = __DIR__.'/../gold-history.html';
-        if (file_exists($htmlFile) === false) {
-            file_put_contents(
-                $htmlFile,
-                file_get_contents($url, false, $context)
-            );
-        }
 
-        $html = file_get_contents($htmlFile);
+        $html = file_get_contents($url, false, $context);
 
         preg_match('/<tbody>.*<\/tbody>/ism', $html, $tbody);
         preg_match_all('/<tr>.*<\/tr>/ismU', $tbody[0], $rows);
