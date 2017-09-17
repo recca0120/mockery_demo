@@ -34,4 +34,21 @@ class AssertionsTest extends TestCase
         
         $this->assertSame($expected, $actual);
     }
+
+    public function test_assert_equals_do_not_check_type() 
+    {
+        $expected = true;
+        $actual = 1;
+        
+        $this->assertEquals($expected, $actual);
+    }
+
+    // 紅燈
+    public function test_assert_equals_check_type() 
+    {
+        $expected = true;
+        $actual = 1;
+        
+        $this->assertSame($expected, $actual);
+    }
 }
