@@ -161,3 +161,17 @@ class AssertionsTest extends TestCase
     }
 }
 ```
+
+### assertInstanceOf
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_instance_of()
+    {
+        $this->assertInstanceOf(stdClass::class, new stdClass);
+    }
+}
+```

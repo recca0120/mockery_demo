@@ -89,4 +89,9 @@ class AssertionsTest extends TestCase
         $this->assertInternalType('float', 1.0);
         $this->assertInternalType('string', '1');
     }
+
+    public function test_assert_instance_of()
+    {
+        $this->assertInstanceOf(stdClass::class, new stdClass);
+    }
 }
