@@ -42,3 +42,4 @@ composer require mockery/mockery --dev
     - 先準備好測試案例，並亮第一個紅燈
     - 完成 parseTbody 並準備第二個測試
     - 完成 parseRows 並準備第三個測試
+    - 完成 parseCols

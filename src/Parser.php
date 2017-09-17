@@ -20,6 +20,14 @@ class Parser
 
     public function parseCols($row) 
     {
-        
+        preg_match_all('/<td[^>]+>(<a[^>]+>)?([^<]+)(<\/a>)?<\/td>/', $row, $cols);
+
+        return  [
+            'date' => $cols[2][0],
+            'currency' => $cols[2][1],
+            'unit' => $cols[2][2],
+            'buy' => $cols[2][3],
+            'sell' => $cols[2][4],
+        ];
     }
 }
