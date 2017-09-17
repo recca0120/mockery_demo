@@ -2,3 +2,4 @@
 - 安裝 Laravel
 - 將 Acme 加入 composer.json，並執行 `composer dump-autoload`
 - 新增 GoldHistoryController，加入gold-hisotry route
+- 新增 GholdHistory Test 並確認測試案例正確
