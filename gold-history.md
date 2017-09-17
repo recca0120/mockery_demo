@@ -25,3 +25,5 @@
 ```bash
 composer dump-autoload
 ```
+
+- 準備好測試案例，並使測試亮第一個紅燈
