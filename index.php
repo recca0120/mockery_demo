@@ -6,4 +6,5 @@ use Acme\GoldHistory;
 
 $goldHistory = new GoldHistory();
 
-var_dump($goldHistory->get());
+header('content-type: application/json');
+echo json_encode($goldHistory->get());

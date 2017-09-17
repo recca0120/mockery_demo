@@ -27,13 +27,21 @@ class GoldHistory
 
         preg_match('/<tbody>.*<\/tbody>/ism', $html, $tbody);
         preg_match_all('/<tr>.*<\/tr>/ismU', $tbody[0], $rows);
-        foreach ($rows[0] as $row) {
-            preg_match_all('/<td[^>]+>(<a[^>]+>)?([^<]+)(<\/a>)?<\/td>/', $row, $cols);
 
-            var_dump($cols);
-            exit;
+        $results = [];
+
+        foreach ($rows[0] as $cols) {
+            preg_match_all('/<td[^>]+>(<a[^>]+>)?([^<]+)(<\/a>)?<\/td>/', $cols, $col);
+            
+            $results[] = [
+                'date' => $col[2][0],
+                'currency' => $col[2][1],
+                'unit' => $col[2][2],
+                'buy' => $col[2][3],
+                'sell' => $col[2][4],
+            ];
         }
 
-        return $html;
+        return $results;
     }
 }
