@@ -13,11 +13,8 @@ class GoldHistory
     {
         $tbody = $this->parser->parseTbody($this->client->get());
 
-        $results = [];
-        foreach ($this->parser->parseRows($tbody) as $row) {
-            $results[] = $this->parser->parseCols($row);
-        }
-
-        return $results;
+        return array_map(function($row) {
+            return $this->parser->parseCols($row);
+        }, $this->parser->parseRows($tbody));
     }
 }

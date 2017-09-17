@@ -45,3 +45,4 @@ composer require mockery/mockery --dev
     - 完成 parseCols
 - 將 Parser 注入到 GoldHistory，並調整測試案例
 - 完成程式碼
+- 重構GoldHistory，讓可閱讀性提高

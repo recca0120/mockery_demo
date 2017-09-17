@@ -10,12 +10,12 @@ use PHPUnit\Framework\TestCase;
 class GoldHistoryTest extends TestCase
 {
     public function test_get_html() 
-    { 
+    {  
         $client = m::mock(new Client);
         $parser = new Parser;
         $client->shouldReceive('get')->once()->andReturn(
             file_get_contents(__DIR__.'/gold-history.html')
-        );
+        );  
         $goldHistory = new GoldHistory($client, $parser);
         $this->assertArraySubSet([
             ['date' => '2017/09/15', 'currency' => '新台幣 (TWD)', 'unit' => '1公克', 'buy' => '1272', 'sell' => '1288'],
