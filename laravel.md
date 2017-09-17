@@ -1,2 +1,3 @@
 - 將檔案移至 Acme 資料夾內
 - 安裝 Laravel
+- 將 Acme 加入 composer.json，並執行 `composer dump-autoload`
