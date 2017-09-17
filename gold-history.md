@@ -36,3 +36,5 @@ composer dump-autoload
 ```bash
 composer require mockery/mockery --dev
 ```
+
+- 使用 stub 來實作 test double
