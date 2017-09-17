@@ -49,3 +49,20 @@ class AssertionsTest extends TestCase
     }
 }
 ```
+
+### assertSame
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_same() 
+    {
+        $expected = true;
+        $actual = true;
+        
+        $this->assertSame($expected, $actual);
+    }
+}
+```

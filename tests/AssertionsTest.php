@@ -26,4 +26,12 @@ class AssertionsTest extends TestCase
         
         $this->assertEquals($expected, $actual);
     }
+
+    public function test_assert_same() 
+    {
+        $expected = true;
+        $actual = true;
+        
+        $this->assertSame($expected, $actual);
+    }
 }
