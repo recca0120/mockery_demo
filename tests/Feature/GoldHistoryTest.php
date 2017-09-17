@@ -46,7 +46,7 @@ class GoldHistoryTest extends TestCase
         $this->assertDatabaseHas('gold_histories', [
             'date' => '2017/09/14',
             'currency' => '新台幣 (TWD)',
-            'unit' => '1公克',
+            'unit' => '1公克', 
             'buy' => '1269',
             'sell' => '1285'
         ]);
