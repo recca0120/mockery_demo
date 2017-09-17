@@ -51,4 +51,11 @@ class AssertionsTest extends TestCase
         
         $this->assertSame($expected, $actual);
     }
+
+    public function test_assert_contains_array()
+    {
+        $needle = 3;
+        
+        $this->assertContains($needle, [1, 3, 5, 7, 9]);
+    }
 }

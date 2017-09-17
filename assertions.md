@@ -66,3 +66,22 @@ class AssertionsTest extends TestCase
     }
 }
 ```
+
+### assertContains
+
+
+#### assertContains (array)
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_contains_array() 
+    {
+        $needle = 3;
+        
+        $this->assertContains($needle, [1, 3, 5, 7, 9]);
+    }
+}
+```
