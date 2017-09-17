@@ -8,3 +8,4 @@
 - 建立 migration
 - 建立 model
 - 修改測試案例
+- 新增 database.sqlite 實際存入資料庫
