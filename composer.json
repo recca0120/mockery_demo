@@ -1,7 +1,0 @@
-{
-    "require": {
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^6.3"
-    }
-}
