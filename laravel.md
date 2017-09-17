@@ -4,3 +4,4 @@
 - 新增 GoldHistoryController，加入gold-hisotry route
 - 新增 GholdHistory Test 並確認測試案例正確
 - 利用 ioc 將 Acme/Client 替換為 $stub
+- 設定測試資料庫
