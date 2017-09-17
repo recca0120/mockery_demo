@@ -75,4 +75,9 @@ class AssertionsTest extends TestCase
     {
         $this->assertArrayHasKey('bar', ['bar' => 'baz']);
     }
+
+    public function test_assert_array_subset()
+    {
+        $this->assertArraySubset(['config' => ['key-a']], ['config' => ['key-a', 'key-c']]);
+    }
 }

@@ -130,3 +130,16 @@ class AssertionsTest extends TestCase
 }
 ```
     
+### assertArraySubset
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_array_subset()
+    {
+        $this->assertArraySubset(['config' => ['key-a']], ['config' => ['key-a', 'key-c']]);
+    }
+}
+```
