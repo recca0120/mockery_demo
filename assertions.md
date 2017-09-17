@@ -85,3 +85,20 @@ class AssertionsTest extends TestCase
     }
 }
 ```
+
+#### assertContains (string)
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_contains_string()
+    {
+        $needle = 'oba';
+        
+        $this->assertContains($needle, 'foobar');
+    }
+}
+```
+

@@ -58,4 +58,11 @@ class AssertionsTest extends TestCase
         
         $this->assertContains($needle, [1, 3, 5, 7, 9]);
     }
+
+    public function test_assert_contains_string()
+    {
+        $needle = 'oba';
+        
+        $this->assertContains($needle, 'foobar');
+    }
 }
