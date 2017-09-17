@@ -17,4 +17,9 @@ class Parser
 
         return $matches[0];
     }
+
+    public function parseCols($row) 
+    {
+        
+    }
 }
