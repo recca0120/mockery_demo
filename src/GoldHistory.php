@@ -24,7 +24,11 @@ class GoldHistory
         }
 
         $html = file_get_contents($htmlFile);
-        
+
+        preg_match('/<tbody>.*<\/tbody>/ism', $html, $tbody);
+
+        var_dump($matches);
+        exit;
 
         return $html;
     }
