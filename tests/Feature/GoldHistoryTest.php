@@ -2,13 +2,21 @@
 
 namespace Tests\Feature;
 
+use Acme\Client;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery as m;
 
 class GoldHistoryTest extends TestCase
 {
     public function test_index()
     {
+        $client = m::mock(new Client);
+        $client->shouldReceive('get')->once()->andReturn(
+            file_get_contents(__DIR__.'/../../Acme/tests/gold-history.html')
+        );
+        $this->app->instance(Client::class, $client);
+
         $response = $this->get('/gold-history');
 
         $response->assertStatus(200);
