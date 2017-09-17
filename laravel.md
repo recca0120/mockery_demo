@@ -6,3 +6,4 @@
 - 利用 ioc 將 Acme/Client 替換為 $stub
 - 設定測試資料庫
 - 建立 migration
+- 建立 model
