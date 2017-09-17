@@ -24,3 +24,23 @@ Generated phpunit.xml in C:\Users\recca\UniServerZ\www\mockery_demo
 ```
 
 ### 新增 tests, src 資料夾
+
+
+### 增加 psr-4
+
+修改 `composer.json`
+
+```json
+{
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/"
+        }
+    }
+}
+```
+
+執行 
+```bash
+composer dump-autoload
+```
