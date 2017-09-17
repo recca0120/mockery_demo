@@ -40,3 +40,4 @@ composer require mockery/mockery --dev
 - 使用 stub 來實作 test double
 - 發現程式不好寫，先實作 Parser Class，用來分析網頁分容
     - 先準備好測試案例，並亮第一個紅燈
+    - 完成 parseTbody 並準備第二個測試
