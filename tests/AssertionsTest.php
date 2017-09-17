@@ -80,4 +80,13 @@ class AssertionsTest extends TestCase
     {
         $this->assertArraySubset(['config' => ['key-a']], ['config' => ['key-a', 'key-c']]);
     }
+
+    public function test_assert_internal_type()
+    {
+        $this->assertInternalType('numeric', 1);
+        $this->assertInternalType('numeric', 1.0);
+        $this->assertInternalType('int', 1);
+        $this->assertInternalType('float', 1.0);
+        $this->assertInternalType('string', '1');
+    }
 }

@@ -143,3 +143,21 @@ class AssertionsTest extends TestCase
     }
 }
 ```
+
+### assertInternalType
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_internal_type()
+    {
+        $this->assertInternalType('numeric', 1);
+        $this->assertInternalType('numeric', 1.0);
+        $this->assertInternalType('int', 1);
+        $this->assertInternalType('float', 1.0);
+        $this->assertInternalType('string', '1');
+    }
+}
+```
