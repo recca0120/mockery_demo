@@ -11,10 +11,10 @@ class GoldHistory
 
     public function get() 
     {
-        $tbody = $this->parser->parseTbody($this->client->get());
-
         return array_map(function($row) {
             return $this->parser->parseCols($row);
-        }, $this->parser->parseRows($tbody));
+        }, $this->parser->parseRows(
+            $this->parser->parseTbody($this->client->get())
+        ));
     }
 }

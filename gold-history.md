@@ -46,3 +46,4 @@ composer require mockery/mockery --dev
 - 將 Parser 注入到 GoldHistory，並調整測試案例
 - 完成程式碼
 - 重構GoldHistory，讓可閱讀性提高
+- 炫技的重構

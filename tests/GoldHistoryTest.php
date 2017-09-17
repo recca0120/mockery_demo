@@ -9,7 +9,7 @@ use Acme\GoldHistory;
 use PHPUnit\Framework\TestCase;
 class GoldHistoryTest extends TestCase
 {
-    public function test_get_html() 
+    public function test_get_html()  
     {  
         $client = m::mock(new Client);
         $parser = new Parser;
