@@ -102,3 +102,19 @@ class AssertionsTest extends TestCase
 }
 ```
 
+
+### assertCount
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class AssertionsTest extends TestCase 
+{
+    public function test_assert_count() 
+    {
+        $this->assertCount(5, [1, 3, 5, 7, 9]);
+    }
+}
+```
+
+    

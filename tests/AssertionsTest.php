@@ -65,4 +65,9 @@ class AssertionsTest extends TestCase
         
         $this->assertContains($needle, 'foobar');
     }
+    
+    public function test_assert_count() 
+    {
+        $this->assertCount(5, [1, 3, 5, 7, 9]);
+    }
 }
