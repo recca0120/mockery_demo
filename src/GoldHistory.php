@@ -26,8 +26,9 @@ class GoldHistory
         $html = file_get_contents($htmlFile);
 
         preg_match('/<tbody>.*<\/tbody>/ism', $html, $tbody);
-
-        var_dump($matches);
+        preg_match_all('/<tr>.*<\/tr>/ismU', $tbody[0], $rows);
+        
+        var_dump($rows);
         exit;
 
         return $html;
