@@ -49,3 +49,9 @@ composer require mockery/mockery --dev
 - 炫技的重構
 - 新增 index.php 看看結果是否正確
 - 注入太麻煩，那就給用預設值
+
+## 驗收測試
+實際測試程式是否正確，但由於我們抓取的是動態資料所以驗證方式改為
+- 驗證回傳型態是否正確 assertInternalType
+- 驗證回傳的 key 值是否正確
+- 任何你想的到的驗證方式

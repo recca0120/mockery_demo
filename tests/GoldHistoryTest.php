@@ -23,4 +23,19 @@ class GoldHistoryTest extends TestCase
             ['date' => '2017/09/13', 'currency' => '新台幣 (TWD)', 'unit' => '1公克', 'buy' => '1276', 'sell' => '1292'],
         ], $goldHistory->get());
     }
+
+    public function test_integation_testing()
+    {
+        $goldHistory = new GoldHistory();
+        $items = $goldHistory->get();
+
+        $this->assertInternalType('array', $items);
+        foreach ($items as $item) {
+            $this->assertArrayHasKey('date', $item);
+            $this->assertArrayHasKey('currency', $item);
+            $this->assertArrayHasKey('unit', $item);
+            $this->assertArrayHasKey('buy', $item);
+            $this->assertArrayHasKey('sell', $item);
+        }
+    }
 } 
